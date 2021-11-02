@@ -1,0 +1,30 @@
+#
+# Include this file in your .gitlab-ci.yml file to automate & integrate Checkmarx security scans.
+#
+# These variables can be overridden in your .gitlab-ci.yml file or as envionrment variables.
+#
+# Please refer to https://checkmarx.com/gitlab for detailed instructions.
+#
+
+variables:
+    GITLAB_URL: "${CI_SERVER_URL}"
+    GITLAB_API_URL: "${CI_API_V4_URL}"
+    PROJECT_NAME: "$CI_PROJECT_NAME-$CI_COMMIT_REF_NAME"
+    BASE_URI: ${CX_BASE_URI}
+    CX_TENANT: ${CX_TENANT}
+    CX_CLIENT_ID: ${CX_CLIENT_ID}
+    CX_CLIENT_SECRET: ${CX_CLIENT_SECRET}
+    ADDITIONAL_PARAMS: ${ADDITIONAL_PARAMS}
+    CHECKMARX_DOCKER_IMAGE: "ast-cli"
+    CX_EXE: "cx.exe"
+    GITLAB_BLOCK_MERGE: "false"
+
+checkmarx-scan:
+  stage: test
+  image:
+    name: checkmarx/${CHECKMARX_DOCKER_IMAGE}
+    entrypoint: ['']
+  script:  
+    - eval "arr=(${ADDITIONAL_PARAMS})"
+    - /app/bin/cx scan create --project-name "${CI_PROJECT_NAME}" --file-source "${CI_REPOSITORY_URL}" --format json --agent "Gitlab" "${arr[@]}"
+
