@@ -25,8 +25,10 @@ checkmarx-scan:
     name: checkmarx/${CHECKMARX_DOCKER_IMAGE}
     entrypoint: ['']
   script:  
-    - if [ "$ADDITIONAL_PARAMS" != "" ]; 
-    /app/bin/cx scan create --project-name "${CI_PROJECT_NAME}" --file-source "${CI_REPOSITORY_URL}" --format json --agent "Gitlab" "${arr[@]}"; 
-    else  /app/bin/cx scan create --project-name "${CI_PROJECT_NAME}" --file-source "${CI_REPOSITORY_URL}" --format json --agent "Gitlab"; fi
+    - if [ "$ADDITIONAL_PARAMS" != "" ]; then 
+        /app/bin/cx scan create --project-name "${CI_PROJECT_NAME}" --file-source "${CI_REPOSITORY_URL}" --format json --agent "Gitlab" "${arr[@]}";
+    else 
+        /app/bin/cx scan create --project-name "${CI_PROJECT_NAME}" --file-source "${CI_REPOSITORY_URL}" --format json --agent "Gitlab"; 
+    fi
 
 
