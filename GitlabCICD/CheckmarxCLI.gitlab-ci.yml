@@ -25,4 +25,4 @@ checkmarx-scan:
     name: checkmarx/${CHECKMARX_DOCKER_IMAGE}
     entrypoint: ['']
   script:
-    - /app/bin/cx scan create --project-name "${PROJECT_NAME}" --file-source "${REPOSITORY_URL}" --format json --branch "${BRANCH_NAME}" --agent "Gitlab" $(echo ADDITIONAL_PARAMS | tr -d '"')
+    - /app/bin/cx scan create --project-name "${PROJECT_NAME}" --file-source "${REPOSITORY_URL}" --format json --branch "${BRANCH_NAME}" --agent "Gitlab" $(echo ${ADDITIONAL_PARAMS} | tr -d '"')
