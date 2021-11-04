@@ -9,6 +9,8 @@
 variables:
     GITLAB_URL: "${CI_SERVER_URL}"
     GITLAB_API_URL: "${CI_API_V4_URL}"
+    REPOSITORY_URL: "${CI_REPOSITORY_URL}"
+    BRANCH_NAME: "${CI_COMMIT_REF_NAME}"
     PROJECT_NAME: "$CI_PROJECT_NAME-$CI_COMMIT_REF_NAME"
     BASE_URI: ${CX_BASE_URI}
     CX_TENANT: ${CX_TENANT}
@@ -16,8 +18,6 @@ variables:
     CX_CLIENT_SECRET: ${CX_CLIENT_SECRET}
     ADDITIONAL_PARAMS: ${ADDITIONAL_PARAMS}
     CHECKMARX_DOCKER_IMAGE: "ast-cli"
-    CX_EXE: "cx.exe"
-    GITLAB_BLOCK_MERGE: "false"
 
 checkmarx-scan:
   stage: test
@@ -25,4 +25,4 @@ checkmarx-scan:
     name: checkmarx/${CHECKMARX_DOCKER_IMAGE}
     entrypoint: ['']
   script:
-    - /app/bin/cx scan create --project-name "${CI_PROJECT_NAME}" --file-source "${CI_REPOSITORY_URL}" --format json --branch "${CI_COMMIT_REF_NAME}" --agent "Gitlab" $(echo ${arr[@]} | tr -d '"')
+    - /app/bin/cx scan create --project-name "${PROJECT_NAME}" --file-source "${REPOSITORY_URL}" --format json --branch "${BRANCH_NAME}" --agent "Gitlab" $(echo ADDITIONAL_PARAMS | tr -d '"')
