@@ -9,12 +9,13 @@
 variables:
     REPOSITORY_URL: "${CI_REPOSITORY_URL}"
     BRANCH_NAME: "${CI_COMMIT_REF_NAME}"
-    PROJECT_NAME: "$CI_PROJECT_NAME-$CI_COMMIT_REF_NAME"
+    PROJECT_NAME: "$CI_PROJECT_NAME"
     BASE_URI: ${CX_BASE_URI}
     CX_TENANT: ${CX_TENANT}
     CX_CLIENT_ID: ${CX_CLIENT_ID}
     CX_CLIENT_SECRET: ${CX_CLIENT_SECRET}
     ADDITIONAL_PARAMS: ${ADDITIONAL_PARAMS}
+    FILE_FILTERS: ""
     CHECKMARX_DOCKER_IMAGE: "ast-cli"
 
 checkmarx-scan:
@@ -23,4 +24,4 @@ checkmarx-scan:
     name: checkmarx/${CHECKMARX_DOCKER_IMAGE}
     entrypoint: ['']
   script:
-    - /app/bin/cx scan create --project-name "${PROJECT_NAME}" --file-source "${REPOSITORY_URL}" --format json --branch "${BRANCH_NAME}" --agent "Gitlab" $(echo "${ADDITIONAL_PARAMS}" | tr -d '"')
+    - /app/bin/cx scan create --project-name "${PROJECT_NAME}" -s "." --format json --branch "${BRANCH_NAME}" -f "${FILE_FILTERS}" --agent "Gitlab" $(echo "${ADDITIONAL_PARAMS}" | tr -d '"')
