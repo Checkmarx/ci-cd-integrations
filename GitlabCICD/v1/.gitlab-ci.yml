@@ -1,0 +1,1 @@
+include: 'https://raw.githubusercontent.com/CheckmarxDev/ast-cicd-templates/master/GitlabCICD/CheckmarxCLI.gitlab-ci.yml'
