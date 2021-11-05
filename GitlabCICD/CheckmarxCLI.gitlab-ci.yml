@@ -14,7 +14,7 @@ variables:
     CX_TENANT: ${CX_TENANT}
     CX_CLIENT_ID: ${CX_CLIENT_ID}
     CX_CLIENT_SECRET: ${CX_CLIENT_SECRET}
-    ADDITIONAL_PARAMS: ${ADDITIONAL_PARAMS}
+    ADDITIONAL_PARAMS: ""
     FILE_FILTERS: ""
     CHECKMARX_DOCKER_IMAGE: "ast-cli"
 
@@ -24,4 +24,5 @@ checkmarx-scan:
     name: checkmarx/${CHECKMARX_DOCKER_IMAGE}
     entrypoint: ['']
   script:
-    - /app/bin/cx scan create --project-name "${PROJECT_NAME}" -s "." --format json --branch "${BRANCH_NAME}" -f "${FILE_FILTERS}" --agent "Gitlab" $(echo "${ADDITIONAL_PARAMS}" | tr -d '"')
+    - if [ -z "$FILE_FILTERS" ]; then /app/bin/cx scan create --project-name "${PROJECT_NAME}" -s "." --format json --branch "${BRANCH_NAME}" --agent "Gitlab" $(echo ${ADDITIONAL_PARAMS} | tr -d '"'); else /app/bin/cx scan create --project-name "${PROJECT_NAME}" -s "." --format json --branch "${BRANCH_NAME}" --agent "Gitlab" $(echo ${ADDITIONAL_PARAMS} | tr -d '"') -f "${FILE_FILTERS}"; fi 
+    
