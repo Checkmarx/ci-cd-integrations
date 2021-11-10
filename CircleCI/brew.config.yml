@@ -1,0 +1,31 @@
+#
+# Example job using the CircleCI base image to run a CxAST scan
+#
+# CLI installed through brew
+#
+# Configuration through environment variables in CircleCI
+#
+
+version: 2
+jobs:
+  build:
+    docker:
+      - image: cimg/base:2021.04
+    steps:
+      - run:
+          name: "Run Scan"
+          command: |
+            /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+            /home/linuxbrew/.linuxbrew/bin/brew install checkmarx/ast-cli/ast-cli
+            /home/linuxbrew/.linuxbrew/Cellar/ast-cli/*/bin/cx \
+            scan create \
+            -s . \
+            --format json \
+            --agent CircleCI \
+            --project-name $PROJECT \
+            --branch $BRANCH \
+            --base-uri $BASE_URI \
+            --tenant $TENANT \
+            --client-id $CLIENT_ID \
+            --client-secret $CLIENT_SECRET \
+            $ADDITIONAL_PARAMS
