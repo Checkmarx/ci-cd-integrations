@@ -11,7 +11,7 @@ pipelines:
             scan create
             -s .
             --format json
-            --agent CircleCI
+            --agent Bitbucket
             --project-name $PROJECT
             --branch $BRANCH
             --base-uri $BASE_URI
