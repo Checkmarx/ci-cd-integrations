@@ -1,0 +1,19 @@
+image: checkmarx/ast-cli
+ 
+pipelines:
+  default:
+    - step:
+        script:
+          - >-
+            /app/bin/cx
+            scan create
+            -s .
+            --format json
+            --agent CircleCI
+            --project-name $PROJECT
+            --branch $BRANCH
+            --base-uri $BASE_URI
+            --tenant $TENANT
+            --client-id $CLIENT_ID
+            --client-secret $CLIENT_SECRET
+            $ADDITIONAL_PARAMS

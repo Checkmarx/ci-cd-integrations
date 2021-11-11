@@ -1,0 +1,21 @@
+image: atlassian/default-image:2
+
+pipelines:
+  default:
+    - step:
+        script:
+          - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+          - /home/linuxbrew/.linuxbrew/bin/brew install checkmarx/ast-cli/ast-cli
+          - >-
+            /home/linuxbrew/.linuxbrew/Cellar/ast-cli/*/bin/cx
+            scan create
+            -s .
+            --format json
+            --agent CircleCI
+            --project-name $PROJECT
+            --branch $BRANCH
+            --base-uri $BASE_URI
+            --tenant $TENANT
+            --client-id $CLIENT_ID
+            --client-secret $CLIENT_SECRET
+            $ADDITIONAL_PARAMS
