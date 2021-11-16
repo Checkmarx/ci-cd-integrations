@@ -1,0 +1,23 @@
+image: checkmarx/ast-cli
+
+pipelines:
+  default:
+    - step:
+        script:
+          - wget https://sca-downloads.s3.amazonaws.com/cli/1.5.57/ScaResolver-linux64.tar.gz
+          - tar -xzvf ScaResolver-linux64.tar.gz
+          - rm -rf ScaResolver-linux64.tar.gz
+          - >-
+            /app/bin/cx
+            scan create
+            -s .
+            --format json
+            --agent Bitbucket
+            --project-name $PROJECT
+            --branch $BRANCH
+            --base-uri $BASE_URI
+            --tenant $TENANT
+            --client-id $CLIENT_ID
+            --client-secret $CLIENT_SECRET
+            --sca-resolver ./ScaResolver
+            $ADDITIONAL_PARAMS
