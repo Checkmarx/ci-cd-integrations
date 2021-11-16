@@ -12,8 +12,8 @@ pipelines:
             -s .
             --format json
             --agent Bitbucket
-            --project-name $PROJECT
-            --branch $BRANCH
+            --project-name $BITBUCKET_REPO_SLUG
+            --branch $BITBUCKET_BRANCH
             --base-uri $BASE_URI
             --tenant $TENANT
             --client-id $CLIENT_ID
