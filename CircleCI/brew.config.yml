@@ -22,8 +22,8 @@ jobs:
             -s . \
             --format json \
             --agent CircleCI \
-            --project-name $PROJECT \
-            --branch $BRANCH \
+            --project-name $CIRCLE_PROJECT_REPONAME \
+            --branch $CIRCLE_BRANCH \
             --base-uri $BASE_URI \
             --tenant $TENANT \
             --client-id $CLIENT_ID \
