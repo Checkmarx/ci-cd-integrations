@@ -1,0 +1,30 @@
+name: SCA Resolver Example
+
+on:
+  push:
+    branches:
+      [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Download SCA Resolver
+        run: |
+          wget https://sca-downloads.s3.amazonaws.com/cli/1.5.57/ScaResolver-linux64.tar.gz
+          tar -xzvf ScaResolver-linux64.tar.gz
+          rm -rf ScaResolver-linux64.tar.gz
+
+      - name: Checkmarx AST CLI Action
+        uses: checkmarxDev/ast-github-action@master
+        with:
+          project_name: sca-resolver-example
+          base_uri: ${{ secrets.CX_BASE_URI }}
+          cx_tenant: ${{ secrets.CX_TENANT }}
+          cx_client_id: ${{ secrets.CX_CLIENT_ID }}
+          cx_client_secret: ${{ secrets.CX_CLIENT_SECRET }}
+          additional_params: --sca-resolver ./ScaResolver
