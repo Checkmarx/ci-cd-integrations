@@ -1,0 +1,19 @@
+version: 2
+
+plan:
+  project-key: TES
+  key: RC
+  name: Checkmarx ast-cli
+
+stages:
+  - Stage 1:
+      jobs:
+        - Job cli
+
+Job cli:
+  docker:
+    image: homebrew/ubuntu18.04
+  tasks:
+    - script:
+        - brew install checkmarx/ast-cli/ast-cli
+        - cx scan create -s ${bamboo.build.working.directory} --project-name ${bamboo.planRepository.1.name} --base-uri ${bamboo.CX_BASE_URI} --tenant ${bamboo.CX_TENANT} --apikey ${bamboo.CX_API_KEY_SECRET} --branch ${bamboo.planRepository.1.branchName}
