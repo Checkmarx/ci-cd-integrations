@@ -21,4 +21,25 @@ checkmarx-scan:
     name: checkmarx/${CHECKMARX_DOCKER_IMAGE}
     entrypoint: ['']
   script:
-    - if [ -z "$FILE_FILTERS" ]; then /app/bin/cx scan create --project-name "${PROJECT_NAME}" -s "." --format json --branch "${BRANCH_NAME}" --agent "Gitlab" $(echo ${ADDITIONAL_PARAMS} | tr -d '"'); else /app/bin/cx scan create --project-name "${PROJECT_NAME}" -s "." --format json --branch "${BRANCH_NAME}" --agent "Gitlab" $(echo ${ADDITIONAL_PARAMS} | tr -d '"') -f "${FILE_FILTERS}"; fi
+    - >-
+      if [ -z "$FILE_FILTERS" ];
+      then 
+      /app/bin/cx
+      scan create
+      --project-name "${PROJECT_NAME}"
+      -s "."
+      --format json
+      --branch "${BRANCH_NAME}" 
+      --agent "Gitlab" 
+      $(echo ${ADDITIONAL_PARAMS} | tr -d '"');
+      else
+      /app/bin/cx
+      scan create
+      --project-name "${PROJECT_NAME}"
+      -s "." 
+      --format json
+      --branch "${BRANCH_NAME}"
+      --agent "Gitlab"
+      $(echo ${ADDITIONAL_PARAMS} | tr -d '"')
+      -f "${FILE_FILTERS}";
+      fi
