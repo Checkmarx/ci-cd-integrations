@@ -1,4 +1,4 @@
-version: 1
+version: 2
 
 plan:
   project-key: TES
@@ -16,4 +16,4 @@ Job cli:
   tasks:
     - script:
         - brew install checkmarx/ast-cli/ast-cli
-        - cx scan create -s ${bamboo.build.working.directory} --project-name testbamboo --base-uri ${bamboo.CX_BASE_URI} --tenant ${bamboo.CX_TENANT} --apikey ${bamboo.CX_API_KEY_SECRET} --branch ${bamboo.CX_BRANCH}
+        - cx scan create -s ${bamboo.build.working.directory} --project-name ${bamboo.CX_PROJECT_NAME} --base-uri ${bamboo.CX_BASE_URI} --tenant ${bamboo.CX_TENANT} --apikey ${bamboo.CX_API_KEY_SECRET} --branch ${bamboo.CX_BRANCH}
