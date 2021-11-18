@@ -1,3 +1,7 @@
+# Documentation:
+# https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6147408761/CI+CD+with+CxSCA+Resolver
+#
+
 name: SCA Resolver Example
 
 on:
