@@ -5,6 +5,9 @@
 #
 # Configuration through environment variables in CircleCI
 #
+# Documentation:
+# https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6142591258/CircleCI
+#
 
 version: 2
 jobs:
@@ -20,7 +23,6 @@ jobs:
             /home/linuxbrew/.linuxbrew/Cellar/ast-cli/*/bin/cx \
             scan create \
             -s . \
-            --format json \
             --agent CircleCI \
             --project-name $CIRCLE_PROJECT_REPONAME \
             --branch $CIRCLE_BRANCH \

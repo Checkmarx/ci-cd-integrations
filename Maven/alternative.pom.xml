@@ -21,26 +21,36 @@
 
     <build>
         <plugins>
-            <!-- AST CLI Maven Plugin -->
+            <!-- Generic exec-maven-plugin -->
             <plugin>
-                <groupId>com.checkmarx</groupId>
-                <artifactId>ast-cli-maven-plugin</artifactId>
-                <version>0.0.1</version>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.0.0</version>
                 <executions>
                     <execution>
                         <phase>
                             test
                         </phase>
                         <goals>
-                            <goal>
-                                run
-                            </goal>
+                            <goal>exec</goal>
                         </goals>
-                        <configuration>
-                            <arguments>scan create -s . --agent Maven --project-name ${project.artifactId} --branch main</arguments>
-                        </configuration>
                     </execution>
                 </executions>
+                <configuration>
+                    <executable>/path/to/cx</executable>
+                    <arguments>
+                        <argument>scan</argument>
+                        <argument>create</argument>
+                        <argument>-s</argument>
+                        <argument>.</argument>
+                        <argument>--agent</argument>
+                        <argument>Maven</argument>
+                        <argument>--project-name</argument>
+                        <argument>${project.artifactId}</argument>
+                        <argument>--branch</argument>
+                        <argument>main</argument>
+                    </arguments>
+                </configuration>
             </plugin>
         </plugins>
     </build>

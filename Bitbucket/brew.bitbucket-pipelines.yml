@@ -1,3 +1,7 @@
+# Documentation:
+# https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6142592048/Bitbucket+Pipelines
+#
+
 image: atlassian/default-image:2
 
 pipelines:
@@ -10,7 +14,6 @@ pipelines:
             /home/linuxbrew/.linuxbrew/Cellar/ast-cli/*/bin/cx
             scan create
             -s .
-            --format json
             --agent Bitbucket
             --project-name $BITBUCKET_REPO_SLUG
             --branch $BITBUCKET_BRANCH
