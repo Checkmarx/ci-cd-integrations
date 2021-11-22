@@ -1,0 +1,35 @@
+version: 2
+plan:
+  project-key: Myproject
+  key: MPCX
+  name: Checkmarx Scan
+stages:
+- Default Stage:
+    jobs:
+    - Scan
+Scan:
+  key: SCAN
+  tasks:
+  - checkout:
+      force-clean-build: 'false'
+      description: Checkout Default Repository
+  - any-task:
+      plugin-key: com.atlassian.bamboo.plugins.bamboo-docker-plugin:task.docker.cli
+      configuration:
+        commandOption: run
+        image: checkmarx/ast-cli
+        detach: 'false'
+        serviceWait: 'false'
+        command: /app/bin/cx scan create -s .  --project-name mybamboo --base-uri ${bamboo.CX_BASE_URI} --tenant ${bamboo.CX_TENANT} --client-id ${bamboo.CX_CLIENT_ID} --client-secret ${bamboo.CX_CLIENT_ID_SECRET} --branch ${bamboo.planRepository.1.branchName} --report-format summaryHTML --output-path ./cx_results/ --output-name cx_results
+        workDir: /data
+        additionalArgs: --entrypoint=""
+        hostDirectory_0: ${bamboo.working.directory}
+        containerDataVolume_0: /data
+      description: Ast Scan
+  artifacts:
+  - name: checkmarx
+    location: cx_results
+    pattern: cx_results.html
+    shared: false
+    required: false
+  artifact-subscriptions: []
