@@ -28,5 +28,3 @@ jobs:
           with:
             args: >
               -Dsonar.externalIssuesReportPaths=cx_result_sonar.json
-
-     
