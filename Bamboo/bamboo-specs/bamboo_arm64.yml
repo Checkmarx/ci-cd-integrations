@@ -12,11 +12,8 @@ stages:
 
 Job cli:
   docker:
-    image: ubuntu:latest
+    image: homebrew/ubuntu18.04
   tasks:
     - script:
-        - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-        - /home/linuxbrew/.linuxbrew/bin/brew install checkmarx/ast-cli/ast-cli
-        - /home/linuxbrew/.linuxbrew/Cellar/ast-cli/*/bin/cx \
         - brew install checkmarx/ast-cli/ast-cli
         - cx scan create -s ${bamboo.build.working.directory} --project-name ${bamboo.planRepository.1.name} --base-uri ${bamboo.CX_BASE_URI} --tenant ${bamboo.CX_TENANT} --client-id ${bamboo.CX_CLIENT_ID} --client-secret ${bamboo.CX_CLIENT_ID_SECRET} --branch ${bamboo.planRepository.1.branchName}
