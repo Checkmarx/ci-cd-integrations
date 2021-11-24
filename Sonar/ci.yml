@@ -19,27 +19,14 @@ jobs:
           cx_client_id: ${{ secrets.CLIENT_ID }}
           cx_client_secret: ${{ secrets.SECRET }}
           additional_params: --report-format sonar
-      - name: Upload results artifact
-        uses: actions/upload-artifact@v2
-        with: 
-          name: results
-          path: ./cx_result_sonar.json
-  build:
-    name: Publish to sonar
-    runs-on: ubuntu-latest
-    needs: cx-scan
-    steps:
-      - uses: actions/download-artifact@v1
-        with:
-          name: results
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - uses: sonarsource/sonarqube-scan-action@master
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          args: >
-            -Dsonar.externalIssuesReportPaths=cx_result_sonar.json
+      - name: Sonar CLI Action 
+        uses: sonarsource/sonarqube-scan-action@master
+          env:
+            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+            SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          with:
+            args: >
+              -Dsonar.externalIssuesReportPaths=cx_result_sonar.json
+
+     
