@@ -17,9 +17,6 @@
     <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6141870542/CxAST+CLI+Integrations+for+CI+CD"><strong>AST CLI Integrations the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/checkmarx/cicd-templates/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/checkmarx/cicd-templates/issues">Request Feature</a>
   </p>
 </p>
 
@@ -73,20 +70,20 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Checkmarx Team
 
-Project Link: [https://github.com/checkmarx/cicd-templates](https://github.com/checkmarx/cicd-templates)
+Project Link: [https://github.com/checkmarx/ci-cd-integrations](https://github.com/checkmarx/ci-cd-integrations)
 
 
 © 2021 Checkmarx Ltd. All Rights Reserved.
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/checkmarx/cicd-templates.svg?style=flat-square
-[contributors-url]:https://github.com/checkmarx/cicd-templates/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/checkmarx/cicd-templates.svg?style=flat-square
-[forks-url]: https://github.com/checkmarx/cicd-templates/network/members
-[stars-shield]: https://img.shields.io/github/stars/checkmarx/cicd-templates.svg?style=flat-square
-[stars-url]: https://github.com/checkmarx/cicd-templates/stargazers
-[issues-shield]: https://img.shields.io/github/issues/checkmarx/cicd-templates.svg?style=flat-square
-[issues-url]: https://github.com/checkmarx/cicd-templates/issues
-[license-shield]: https://img.shields.io/github/license/checkmarx/cicd-templates.svg?style=flat-square
-[license-url]: https://github.com/checkmarx/cicd-templates/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/checkmarx/ci-cd-integrations.svg?style=flat-square
+[contributors-url]:https://github.com/checkmarx/ci-cd-integrations/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/checkmarx/ci-cd-integrations.svg?style=flat-square
+[forks-url]: https://github.com/checkmarx/ci-cd-integrations/network/members
+[stars-shield]: https://img.shields.io/github/stars/checkmarx/ci-cd-integrations.svg?style=flat-square
+[stars-url]: https://github.com/checkmarx/ci-cd-integrations/stargazers
+[issues-shield]: https://img.shields.io/github/issues/checkmarx/ci-cd-integrations.svg?style=flat-square
+[issues-url]: https://github.com/checkmarx/ci-cd-integrations/issues
+[license-shield]: https://img.shields.io/github/license/checkmarx/ci-cd-integrations.svg?style=flat-square
+[license-url]: https://github.com/checkmarx/ci-cd-integrations/blob/master/LICENSE
 [product-screenshot]: images/screenshot.png
