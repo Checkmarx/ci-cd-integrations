@@ -1,0 +1,52 @@
+name: Security Scan
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  scan:
+
+    runs-on: ubuntu-latest
+    if: ${{ true }}
+
+    steps:
+      - uses: actions/checkout@v2
+      - run: |
+          git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
+
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11.0.7
+
+      - name: Cache local Maven repository
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      - name: Cache SonarCloud packages
+        uses: actions/cache@v2
+        with:
+          path: ~/.sonar/cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
+
+      - name: Checkmarx AST CLI Action
+        uses: Checkmarx/ast-github-action@master
+        with:
+            project_name: <your_project_name>
+            base_uri: <AST Base URI>
+            cx_tenant: ${{ secrets.CX_TENANT }}
+            cx_client_id: ${{ secrets.CX_CLIENT_ID }}
+            cx_client_secret: ${{ secrets.CX_CLIENT_SECRET }}
+            additional_params: --report-format sonar
+
+      - name: Sonar analyze
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=<sonar_project_key> -Dsonar.organization=<sonar_organization> -Dsonar.externalIssuesReportPaths=./cx_result_sonar.json 
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
