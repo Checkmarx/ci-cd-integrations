@@ -1,10 +1,10 @@
-name: Build
+name: Security Scan
 on:
   push:
     branches:
       - main
 jobs:
-  cx-scan:
+  scan:
     name: Run CxAST cli
     runs-on: ubuntu-latest
     steps:
