@@ -23,12 +23,22 @@ jobs:
           tar -xzvf ScaResolver-linux64.tar.gz
           rm -rf ScaResolver-linux64.tar.gz
 
-      - name: Checkmarx AST CLI Action
-        uses: checkmarxDev/ast-github-action@master
-        with:
-          project_name: sca-resolver-example
-          base_uri: ${{ secrets.CX_BASE_URI }}
-          cx_tenant: ${{ secrets.CX_TENANT }}
-          cx_client_id: ${{ secrets.CX_CLIENT_ID }}
-          cx_client_secret: ${{ secrets.CX_CLIENT_SECRET }}
-          additional_params: --sca-resolver ./ScaResolver
+      - name: Install Maven, NPM, ... # Add any necessary package management
+        run: |
+          sudo apt install maven npm
+
+      - name: Run Checkmarx AST CLI Scan
+        run: |
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+          /home/linuxbrew/.linuxbrew/bin/brew install checkmarx/ast-cli/ast-cli
+          /home/linuxbrew/.linuxbrew/Cellar/ast-cli/*/bin/cx \
+            scan create \
+            -s . \
+            --agent GitHub \
+            --project-name ${{ github.repository }} \
+            --branch ${GITHUB_REF##*/} \
+            --base-uri ${{ secrets.CX_BASE_URI }} \
+            --tenant ${{ secrets.CX_TENANT }} \
+            --client-id ${{ secrets.CX_CLIENT_ID }} \
+            --client-secret ${{ secrets.CX_CLIENT_SECRET }} \
+            --sca-resolver ./ScaResolver
