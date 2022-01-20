@@ -1,1 +1,2 @@
-include: 'https://raw.githubusercontent.com/CheckmarxDev/ast-cicd-templates/master/GitlabCICD/CheckmarxCLI.gitlab-ci.yml'
+include: 'https://raw.githubusercontent.com/Checkmarx/ci-cd-integrations/main/GitlabCICD/v1/CheckmarxCLI.gitlab-ci.yml'
+
