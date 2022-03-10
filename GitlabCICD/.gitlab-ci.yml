@@ -1,1 +1,4 @@
 include: 'https://raw.githubusercontent.com/Checkmarx/ci-cd-integrations/main/GitlabCICD/v1/CheckmarxCLI.gitlab-ci.yml'
+
+variables:
+  CX_ADDITIONAL_PARAMS: --debug
