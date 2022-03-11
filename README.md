@@ -69,15 +69,12 @@ Contributions are what make the open source community such an amazing place to l
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-![Termux Logo](https://user-images.githubusercontent.com/72879799/153904003-d7dee710-6552-4d23-a803-7a9a0ba67d92.png#gh-dark-mode-only)
-![Termux Logo](https://user-images.githubusercontent.com/72879799/153904095-9d78a019-8495-4035-8174-e3da8e4dd66b.png#gh-light-mode-only)
-
 
 <table style="padding:10px;text-align:center">
   <tr>
      <td width="33%">
       <a href="https://github.com/Checkmarx/ast-cli/">
-        <img src=".images/azure.svg" />
+        <img src=".images/cli.png" />
       </a>
     </td>
      <td width="33%">
