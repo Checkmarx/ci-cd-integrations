@@ -1,6 +1,6 @@
 <img src=".images/banner.png">
 <br />
-<div >
+<div  align="center" >
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
