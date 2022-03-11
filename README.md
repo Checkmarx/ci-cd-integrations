@@ -10,14 +10,14 @@
 
 </div>
 <br />
-<p >
+<p align="center"  >
   <a href="https://checkmarx.com/" target="_blank">
     <img src=".images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 >Checkmarx CI/CD Integrations</h3>
+  <h3  align="center" >Checkmarx CI/CD Integrations</h3>
 
-  <p >
+  <p  align="center" >
     <br />
     <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6141870542/CxAST+CLI+Integrations+for+CI+CD" target="_blank"><strong>AST CLI Integrations the docs »</strong></a>
     <br />
