@@ -115,13 +115,13 @@ Contributions are what make the open source community such an amazing place to l
             </p>
         </td>
     </tr>
-    <tr>
+    <tr align="center">
         <td>
             <a href="https://github.com/jenkinsci/checkmarx-ast-scanner-plugin">
                 <img src=".images/jenkins.png" />
             </a>
         </td>
-        <td>
+        <td align="center">
             <a href="https://github.com/CheckmarxDev/ast-cli-maven-plugin">
                 <img src=".images/maven.png" />
             </a>
