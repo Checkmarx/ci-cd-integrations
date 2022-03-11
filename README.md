@@ -62,165 +62,166 @@ Contributions are what make the open source community such an amazing place to l
 
 ## Other plugins
 
-<table style="text-align:center">
-  <tr>
-     <td>
-      <a href="https://github.com/Checkmarx/ast-cli/" target="_blank">
-        <img src=".images/cli.png" />
-      </a>
-    </td>
-     <td>
-      <a href="https://github.com/Checkmarx/ast-azure-plugin" target="_blank">
-        <img src=".images/azure.svg" />
-      </a>
-    </td>
-     <td>
-      <a href="https://github.com/Checkmarx/ast-cli/#gh-light-mode-only" target="_blank">
-        <img src=".images/github.png"/>
-      </a>
-    </td>
-  </tr>
-  <tr>
-  <td>
-      <p align="center">
-        <br />
-        <a href="https://github.com/Checkmarx/homebrew-ast-cli"><strong>Homebrew »</strong></a>
-        <br />
-        <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/2445443121/CLI+Tool"><strong>Documentation »</strong></a>
-        <br />
-        <a href="https://github.com/Checkmarx/ast-cli"><strong>Source code »</strong></a>
-        <br />
-      </p>
-   </td>
-   <td>
-         <p align="center">
-        <br />
-        <a href="https://marketplace.visualstudio.com/items?itemName=checkmarx.checkmarx-ast-azure-plugin"><strong>Marketplace »</strong></a>
-        <br />
-        <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/5938544894/Quick+Start+Guide+-+CxAST+Azure+DevOps+Plugin"><strong>Documentation »</strong></a>
-        <br />
-        <a href="https://github.com/Checkmarx/ast-azure-plugin"><strong>Source code »</strong></a>
-        <br />
-      </p>
-   </td>
-   <td>
-   <p align="center">
-        <br />
-        <a href="https://github.com/marketplace/actions/checkmarx-ast-github-action"><strong>Marketplace »</strong></a>
-        <br />
-        <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/3080454799/Quick+Start+Guide+-+CxAST+GitHub+Action"><strong>Documentation »</strong></a>
-        <br />
-        <a href="https://github.com/Checkmarx/ast-github-action"><strong>Source code »</strong></a>
-        <br />
-      </p>
-   </td>
-  </tr>
-  <tr >
-     <td>
-      <a href="https://github.com/jenkinsci/checkmarx-ast-scanner-plugin">
-        <img src=".images/jenkins.png"/>
-      </a>
-    </td>
-     <td>
-      <a href="https://github.com/CheckmarxDev/ast-cli-maven-plugin">
-        <img src=".images/maven.png"/>
-      </a>
-    </td>
-    <td>
-      <a href="https://github.com/Checkmarx/ast-teamcity-plugin">
-        <img src=".images/teamcity.png"/>
-      </a>
-    </td>
-  </tr>
-   <tr>
-   <td>
-      <p align="center">
-        <br />
-        <a href="https://plugins.jenkins.io/checkmarx-ast-scanner/"><strong>Marketplace »</strong></a>
-        <br />
-        <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/2966164587/Jenkins+Plugin"><strong>Documentation »</strong></a>
-        <br />
-        <a href="https://github.com/jenkinsci/checkmarx-ast-scanner-plugin"><strong>Source code »</strong></a>
-        <br />
-      </p>
-   </td>
-   <td>
-         <p align="center">
-        <br />
-        <a href="https://mvnrepository.com/artifact/com.checkmarx/ast-cli-maven-plugin"><strong>Marketplace »</strong></a>
-        <br />
-        <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6138626217/CxAST+Maven+Plugin"><strong>Documentation »</strong></a>
-        <br />
-        <a href="https://github.com/CheckmarxDev/ast-cli-maven-plugin"><strong>Source code »</strong></a>
-        <br />
-      </p>
-   </td>
-   <td>
-   <p align="center">
-        <br />
-        <a href="https://plugins.jetbrains.com/plugin/17610-checkmarx-ast"><strong>Marketplace »</strong></a>
-        <br />
-        <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6023875112/TeamCity+Plugin"><strong>Documentation »</strong></a>
-        <br />
-        <a href="https://github.com/Checkmarx/ast-teamcity-plugin"><strong>Source code »</strong></a>
-        <br />
-      </p>
-   </td>
-  </tr>
-  <tr >
-     <td >
-      <a href="https://github.com/Checkmarx/ast-eclipse-plugin">
-        <img src=".images/eclipse.svg" width="70%"/>
-      </a>
-    </td>
-     <td>
-      <a href="https://github.com/Checkmarx/ast-jetbrains-plugin">
-        <img src=".images/jetbrains.png"/>
-      </a>
-    </td>
-    <td >
-      <a href="https://github.com/Checkmarx/ast-vscode-extension">
-        <img src=".images/vscode.png"/>
-      </a>
-    </td>
-  </tr>
-   <tr>
-   <td>
-        <p align="center">
-        <br />
-        <a href="https://marketplace.eclipse.org/content/checkmarx-ast-plugin"><strong>Marketplace »</strong></a>
-        <br />
-        <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6080692227"><strong>Documentation »</strong></a>
-        <br />
-        <a href="https://github.com/Checkmarx/ast-eclipse-plugin"><strong>Source code »</strong></a>
-        <br />
-      </p>
-   </td>
-   <td>
-   <p align="center">
-        <br />
-        <a href="https://plugins.jetbrains.com/plugin/17672-checkmarx-ast"><strong>Marketplace »</strong></a>
-        <br />
-        <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6030557208/JetBrains"><strong>Documentation »</strong></a>
-        <br />
-        <a href="https://github.com/Checkmarx/ast-jetbrains-plugin"><strong>Source code »</strong></a>
-        <br />
-      </p>
-   </td>
-      <td>
-         <p align="center">
-        <br />
-        <a href="https://marketplace.visualstudio.com/items?itemName=checkmarx.ast-results"><strong>Marketplace »</strong></a>
-        <br />
-        <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6080692227"><strong>Documentation »</strong></a>
-        <br />
-        <a href="https://github.com/Checkmarx/ast-vscode-extension"><strong>Source code »</strong></a>
-        <br />
-      </p>
-   </td>
-  </tr>
+<table style="text-align: center">
+    <tr>
+        <td width="33%">
+            <a href="https://github.com/Checkmarx/ast-cli/" target="_blank">
+                <img src=".images/cli.png" />
+            </a>
+        </td>
+        <td width="33%">
+            <a href="https://github.com/Checkmarx/ast-azure-plugin" target="_blank">
+                <img src=".images/azure.svg" />
+            </a>
+        </td>
+        <td width="33%">
+            <a href="https://github.com/Checkmarx/ast-cli/#gh-light-mode-only" target="_blank">
+                <img src=".images/github.png" />
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p align="center">
+                <br />
+                <a href="https://github.com/Checkmarx/homebrew-ast-cli"><strong>Homebrew »</strong></a>
+                <br />
+                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/2445443121/CLI+Tool"><strong>Documentation »</strong></a>
+                <br />
+                <a href="https://github.com/Checkmarx/ast-cli"><strong>Source code »</strong></a>
+                <br />
+            </p>
+        </td>
+        <td>
+            <p align="center">
+                <br />
+                <a href="https://marketplace.visualstudio.com/items?itemName=checkmarx.checkmarx-ast-azure-plugin"><strong>Marketplace  »</strong></a>
+                <br />
+                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/5938544894/Quick+Start+Guide+-+CxAST+Azure+DevOps+Plugin"><strong>Documentation »</strong></a>
+                <br />
+                <a href="https://github.com/Checkmarx/ast-azure-plugin"><strong>Source code »</strong></a>
+                <br />
+            </p>
+        </td>
+        <td>
+            <p align="center">
+                <br />
+                <a href="https://github.com/marketplace/actions/checkmarx-ast-github-action"><strong>Marketplace »</strong></a>
+                <br />
+                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/3080454799/Quick+Start+Guide+-+CxAST+GitHub+Action"><strong>Documentation »</strong></a>
+                <br />
+                <a href="https://github.com/Checkmarx/ast-github-action"><strong>Source code »</strong></a>
+                <br />
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="https://github.com/jenkinsci/checkmarx-ast-scanner-plugin">
+                <img src=".images/jenkins.png" />
+            </a>
+        </td>
+        <td>
+            <a href="https://github.com/CheckmarxDev/ast-cli-maven-plugin">
+                <img src=".images/maven.png" />
+            </a>
+        </td>
+        <td>
+            <a href="https://github.com/Checkmarx/ast-teamcity-plugin">
+                <img src=".images/teamcity.png" />
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p align="center">
+                <br />
+                <a href="https://plugins.jenkins.io/checkmarx-ast-scanner/"><strong>Marketplace »</strong></a>
+                <br />
+                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/2966164587/Jenkins+Plugin"><strong>Documentation »</strong></a>
+                <br />
+                <a href="https://github.com/jenkinsci/checkmarx-ast-scanner-plugin"><strong>Source code »</strong></a>
+                <br />
+            </p>
+        </td>
+        <td>
+            <p align="center">
+                <br />
+                <a href="https://mvnrepository.com/artifact/com.checkmarx/ast-cli-maven-plugin"><strong>Marketplace
+                        »</strong></a>
+                <br />
+                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6138626217/CxAST+Maven+Plugin"><strong>Documentation »</strong></a>
+                <br />
+                <a href="https://github.com/CheckmarxDev/ast-cli-maven-plugin"><strong>Source code »</strong></a>
+                <br />
+            </p>
+        </td>
+        <td>
+            <p align="center">
+                <br />
+                <a href="https://plugins.jetbrains.com/plugin/17610-checkmarx-ast"><strong>Marketplace »</strong></a>
+                <br />
+                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6023875112/TeamCity+Plugin"><strong>Documentation »</strong></a>
+                <br />
+                <a href="https://github.com/Checkmarx/ast-teamcity-plugin"><strong>Source code »</strong></a>
+                <br />
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="https://github.com/Checkmarx/ast-eclipse-plugin">
+                <img src=".images/eclipse.svg" width="70%" />
+            </a>
+        </td>
+        <td>
+            <a href="https://github.com/Checkmarx/ast-jetbrains-plugin">
+                <img src=".images/jetbrains.png" />
+            </a>
+        </td>
+        <td>
+            <a href="https://github.com/Checkmarx/ast-vscode-extension">
+                <img src=".images/vscode.png" />
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p align="center">
+                <br />
+                <a href="https://marketplace.eclipse.org/content/checkmarx-ast-plugin"><strong>Marketplace »</strong></a>
+                <br />
+                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6080692227"><strong>Documentation »</strong></a>
+                <br />
+                <a href="https://github.com/Checkmarx/ast-eclipse-plugin"><strong>Source code »</strong></a>
+                <br />
+            </p>
+        </td>
+        <td>
+            <p align="center">
+                <br />
+                <a href="https://plugins.jetbrains.com/plugin/17672-checkmarx-ast"><strong>Marketplace »</strong></a>
+                <br />
+                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6030557208/JetBrains"><strong>Documentation »</strong></a>
+                <br />
+                <a href="https://github.com/Checkmarx/ast-jetbrains-plugin"><strong>Source code »</strong></a>
+                <br />
+            </p>
+        </td>
+        <td>
+            <p align="center">
+                <br />
+                <a href="https://marketplace.visualstudio.com/items?itemName=checkmarx.ast-results"><strong>Marketplace
+                        »</strong></a>
+                <br />
+                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6080692227"><strong>Documentation »</strong></a>
+                <br />
+                <a href="https://github.com/Checkmarx/ast-vscode-extension"><strong>Source code »</strong></a>
+                <br />
+            </p>
+        </td>
+    </tr>
 </table>
-
 
 
 <!-- LICENSE -->
