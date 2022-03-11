@@ -168,9 +168,9 @@ Contributions are what make the open source community such an amazing place to l
    </td>
   </tr>
   <tr >
-     <td width="33%">
+     <td >
       <a href="https://github.com/Checkmarx/ast-eclipse-plugin">
-        <img src=".images/eclipse.svg"/>
+        <img src=".images/eclipse.svg" width="70%"/>
       </a>
     </td>
      <td>
