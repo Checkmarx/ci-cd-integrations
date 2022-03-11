@@ -1,0 +1,5 @@
+include: 'https://raw.githubusercontent.com/Checkmarx/ci-cd-integrations/main/GitlabCICD/v1/CheckmarxCLI.gitlab-ci.yml'
+
+#You can check the options that better fit your use case in the documentation page, https://checkmarx.atlassian.net/wiki/spaces/AST/pages/3080194906/scan+create#Flags
+variables:
+  CX_ADDITIONAL_PARAMS: --debug
