@@ -125,27 +125,18 @@ Distributed under the MIT License. See `LICENSE` for more information.
   </tr>
   <tr height="100px">
      <td width="33%">
-      <a href="https://github.com/Checkmarx/ast-cli/#gh-light-mode-only">
+      <a href="https://github.com/Checkmarx/ast-cli/">
         <img src=".images/jenkins.png"/>
-      </a>
-      <a href="https://github.com/Checkmarx/ast-cli/#gh-dark-mode-only">
-        <img src=".images/jenkins.png" />
       </a>
     </td>
      <td width="33%">
-      <a href="https://github.com/Checkmarx/ast-cli/#gh-light-mode-only">
+      <a href="https://github.com/Checkmarx/ast-cli/">
         <img src=".images/maven.png"/>
-      </a>
-      <a href="https://github.com/Checkmarx/ast-cli/#gh-dark-mode-only">
-        <img src=".images/maven.svg" />
       </a>
     </td>
     <td width="33%">
       <a href="https://github.com/Checkmarx/ast-cli/#gh-light-mode-only">
         <img src=".images/teamcity.png"/>
-      </a>
-      <a href="https://github.com/Checkmarx/ast-cli/#gh-dark-mode-only">
-        <img src=".images/teamcity.png" />
       </a>
     </td>
   </tr>
