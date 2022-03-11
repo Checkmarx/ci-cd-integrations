@@ -63,7 +63,191 @@ Contributions are what make the open source community such an amazing place to l
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-
+<table style="padding:10px;text-align:center">
+  <tr>
+     <td width="33%">
+      <a href="https://github.com/Checkmarx/ast-cli/#gh-light-mode-only">
+        <img src=".images/azure_light.png"/>
+      </a>
+      <a href="https://github.com/Checkmarx/ast-cli/#gh-dark-mode-only">
+        <img src=".images/azure.svg" />
+      </a>
+    </td>
+     <td width="33%">
+      <a href="https://github.com/Checkmarx/ast-azure-plugin/#gh-light-mode-only">
+        <img src=".images/azure_light.png"/>
+      </a>
+      <a href="https://github.com/Checkmarx/ast-azure-plugin/#gh-dark-mode-only">
+        <img src=".images/azure.svg" />
+      </a>
+    </td>
+     <td width="33%">
+      <a href="https://github.com/Checkmarx/ast-cli/#gh-light-mode-only">
+        <img src=".images/github_light.png"/>
+      </a>
+      <a href="https://github.com/Checkmarx/ast-cli/#gh-dark-mode-only">
+        <img src=".images/github_dark.png" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+   <td width="33%">
+         <p align="center">
+        <br />
+        <a href="https://github.com/Checkmarx/homebrew-ast-cli"><strong>Homebrew »</strong></a>
+        <br />
+        <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/2445443121/CLI+Tool"><strong>Documentation »</strong></a>
+        <br />
+        <a href="https://github.com/Checkmarx/ast-cli"><strong>Source code »</strong></a>
+        <br />
+      </p>
+   </td>
+   <td width="33%">
+         <p align="center">
+        <br />
+        <a href="https://marketplace.visualstudio.com/items?itemName=checkmarx.checkmarx-ast-azure-plugin"><strong>Marketplace »</strong></a>
+        <br />
+        <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/5938544894/Quick+Start+Guide+-+CxAST+Azure+DevOps+Plugin"><strong>Documentation »</strong></a>
+        <br />
+        <a href="https://github.com/Checkmarx/ast-azure-plugin"><strong>Source code »</strong></a>
+        <br />
+      </p>
+   </td>
+   <td width="33%">
+   <p align="center">
+        <br />
+        <a href="https://github.com/marketplace/actions/checkmarx-ast-github-action"><strong>Marketplace »</strong></a>
+        <br />
+        <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/3080454799/Quick+Start+Guide+-+CxAST+GitHub+Action"><strong>Documentation »</strong></a>
+        <br />
+        <a href="https://github.com/Checkmarx/ast-github-action"><strong>Source code »</strong></a>
+        <br />
+      </p>
+   </td>
+  </tr>
+  <tr height="100px">
+     <td width="33%">
+      <a href="https://github.com/Checkmarx/ast-cli/#gh-light-mode-only">
+        <img src=".images/jenkins.png"/>
+      </a>
+      <a href="https://github.com/Checkmarx/ast-cli/#gh-dark-mode-only">
+        <img src=".images/jenkins.png" />
+      </a>
+    </td>
+     <td width="33%">
+      <a href="https://github.com/Checkmarx/ast-cli/#gh-light-mode-only">
+        <img src=".images/maven.png"/>
+      </a>
+      <a href="https://github.com/Checkmarx/ast-cli/#gh-dark-mode-only">
+        <img src=".images/maven.svg" />
+      </a>
+    </td>
+    <td width="33%">
+      <a href="https://github.com/Checkmarx/ast-cli/#gh-light-mode-only">
+        <img src=".images/teamcity.png"/>
+      </a>
+      <a href="https://github.com/Checkmarx/ast-cli/#gh-dark-mode-only">
+        <img src=".images/teamcity.png" />
+      </a>
+    </td>
+  </tr>
+   <tr>
+   <td width="33%">
+         <p align="center">
+        <br />
+        <a href="https://github.com/Checkmarx/homebrew-ast-cli"><strong>Homebrew »</strong></a>
+        <br />
+        <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/2445443121/CLI+Tool"><strong>Documentation »</strong></a>
+        <br />
+        <a href="https://github.com/Checkmarx/ast-cli"><strong>Source code »</strong></a>
+        <br />
+      </p>
+   </td>
+   <td width="33%">
+         <p align="center">
+        <br />
+        <a href="https://marketplace.visualstudio.com/items?itemName=checkmarx.checkmarx-ast-azure-plugin"><strong>Marketplace »</strong></a>
+        <br />
+        <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/5938544894/Quick+Start+Guide+-+CxAST+Azure+DevOps+Plugin"><strong>Documentation »</strong></a>
+        <br />
+        <a href="https://github.com/Checkmarx/ast-azure-plugin"><strong>Source code »</strong></a>
+        <br />
+      </p>
+   </td>
+   <td width="33%">
+   <p align="center">
+        <br />
+        <a href="https://github.com/marketplace/actions/checkmarx-ast-github-action"><strong>Marketplace »</strong></a>
+        <br />
+        <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/3080454799/Quick+Start+Guide+-+CxAST+GitHub+Action"><strong>Documentation »</strong></a>
+        <br />
+        <a href="https://github.com/Checkmarx/ast-github-action"><strong>Source code »</strong></a>
+        <br />
+      </p>
+   </td>
+  </tr>
+  <tr height="100px">
+     <td width="33%">
+      <a href="https://github.com/Checkmarx/ast-cli/#gh-light-mode-only">
+        <img src=".images/eclipse.svg"/>
+      </a>
+      <a href="https://github.com/Checkmarx/ast-cli/#gh-dark-mode-only">
+        <img src=".images/eclipse.svg" />
+      </a>
+    </td>
+     <td width="33%">
+      <a href="https://github.com/Checkmarx/ast-cli/#gh-light-mode-only">
+        <img src=".images/jetbrains.png"/>
+      </a>
+      <a href="https://github.com/Checkmarx/ast-cli/#gh-dark-mode-only">
+        <img src=".images/jetbrains.png" />
+      </a>
+    </td>
+    <td width="33%">
+      <a href="https://github.com/Checkmarx/ast-cli/#gh-light-mode-only">
+        <img src=".images/vscode.png"/>
+      </a>
+      <a href="https://github.com/Checkmarx/ast-cli/#gh-dark-mode-only">
+        <img src=".images/vscode.png" />
+      </a>
+    </td>
+  </tr>
+   <tr>
+   <td width="33%">
+         <p align="center">
+        <br />
+        <a href="https://github.com/Checkmarx/homebrew-ast-cli"><strong>Homebrew »</strong></a>
+        <br />
+        <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/2445443121/CLI+Tool"><strong>Documentation »</strong></a>
+        <br />
+        <a href="https://github.com/Checkmarx/ast-cli"><strong>Source code »</strong></a>
+        <br />
+      </p>
+   </td>
+   <td width="33%">
+         <p align="center">
+        <br />
+        <a href="https://marketplace.visualstudio.com/items?itemName=checkmarx.checkmarx-ast-azure-plugin"><strong>Marketplace »</strong></a>
+        <br />
+        <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/5938544894/Quick+Start+Guide+-+CxAST+Azure+DevOps+Plugin"><strong>Documentation »</strong></a>
+        <br />
+        <a href="https://github.com/Checkmarx/ast-azure-plugin"><strong>Source code »</strong></a>
+        <br />
+      </p>
+   </td>
+   <td width="33%">
+   <p align="center">
+        <br />
+        <a href="https://github.com/marketplace/actions/checkmarx-ast-github-action"><strong>Marketplace »</strong></a>
+        <br />
+        <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/3080454799/Quick+Start+Guide+-+CxAST+GitHub+Action"><strong>Documentation »</strong></a>
+        <br />
+        <a href="https://github.com/Checkmarx/ast-github-action"><strong>Source code »</strong></a>
+        <br />
+      </p>
+   </td>
+  </tr>
+</table>
 
 <!-- CONTACT -->
 ## Contact
