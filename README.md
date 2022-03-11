@@ -67,8 +67,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
   <tr>
      <td width="33%">
       <a href="https://github.com/Checkmarx/ast-cli/">
-        <img src=".images/azure.svg#gh-light-mode-only"/>
-        <img src=".images/azure_light.png#gh-dark-mode-only" />
+        <img src="https://raw.githubusercontent.com/Checkmarx/ci-cd-integrations/60b753a6ef13dd8dd01bd7e7f465c28d6707e715/.images/azure.svg#gh-light-mode-only"/>
+        <img src="https://github.com/Checkmarx/ci-cd-integrations/raw/feature/improve_readme/.images/azure_dark.png#gh-dark-mode-only" />
       </a>
     </td>
      <td width="33%">
