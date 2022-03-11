@@ -4,6 +4,12 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
+<style>
+td, th {
+   border: none!important;
+}
+</style>
+
 <br />
 <p align="center">
   <a href="">
@@ -63,33 +69,28 @@ Contributions are what make the open source community such an amazing place to l
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
+![GitHub-Mark-Light](https://user-images.githubusercontent.com/3369400/139447912-e0f43f33-6d9f-45f8-be46-2df5bbc91289.png#gh-dark-mode-only)![GitHub-Mark-Dark](https://user-images.githubusercontent.com/3369400/139448065-39a229ba-4b06-434b-bc67-616e2ed80c8f.png#gh-light-mode-only)
+
 <table style="padding:10px;text-align:center">
   <tr>
      <td width="33%">
       <a href="https://github.com/Checkmarx/ast-cli/">
-        <img src="https://raw.githubusercontent.com/Checkmarx/ci-cd-integrations/60b753a6ef13dd8dd01bd7e7f465c28d6707e715/.images/azure.svg#gh-light-mode-only"/>
-        <img src="https://github.com/Checkmarx/ci-cd-integrations/raw/feature/improve_readme/.images/azure_dark.png#gh-dark-mode-only" />
+        <img src=".images/azure.svg" />
       </a>
     </td>
      <td width="33%">
-      <a href="https://github.com/Checkmarx/ast-azure-plugin/#gh-light-mode-only">
-        <img src=".images/azure_light.png"/>
-      </a>
-      <a href="https://github.com/Checkmarx/ast-azure-plugin/#gh-dark-mode-only">
+      <a href="https://github.com/Checkmarx/ast-azure-plugin">
         <img src=".images/azure.svg" />
       </a>
     </td>
      <td width="33%">
       <a href="https://github.com/Checkmarx/ast-cli/#gh-light-mode-only">
-        <img src=".images/github_light.png"/>
-      </a>
-      <a href="https://github.com/Checkmarx/ast-cli/#gh-dark-mode-only">
-        <img src=".images/github_dark.png" />
+        <img src=".images/github.png"/>
       </a>
     </td>
   </tr>
   <tr>
-   <td width="33%">
+  <td width="33%">
          <p align="center">
         <br />
         <a href="https://github.com/Checkmarx/homebrew-ast-cli"><strong>Homebrew »</strong></a>
