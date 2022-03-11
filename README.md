@@ -1,6 +1,6 @@
 <img src=".images/banner.png">
 <br />
-<div align="center">
+<div >
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -10,14 +10,14 @@
 
 </div>
 <br />
-<p align="center">
+<p >
   <a href="https://checkmarx.com/" target="_blank">
     <img src=".images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Checkmarx CI/CD Integrations</h3>
+  <h3 >Checkmarx CI/CD Integrations</h3>
 
-  <p align="center">
+  <p >
     <br />
     <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6141870542/CxAST+CLI+Integrations+for+CI+CD" target="_blank"><strong>AST CLI Integrations the docs »</strong></a>
     <br />
@@ -62,8 +62,8 @@ Contributions are what make the open source community such an amazing place to l
 
 ## Other plugins
 
-<table style="text-align: center">
-    <tr>
+<table>
+    <tr align="center">
         <td width="33%">
             <a href="https://github.com/Checkmarx/ast-cli/" target="_blank">
                 <img src=".images/cli.png" />
@@ -80,9 +80,9 @@ Contributions are what make the open source community such an amazing place to l
             </a>
         </td>
     </tr>
-    <tr>
+    <tr align="center">
         <td>
-            <p align="center">
+            <p >
                 <br />
                 <a href="https://github.com/Checkmarx/homebrew-ast-cli"><strong>Homebrew »</strong></a>
                 <br />
@@ -93,7 +93,7 @@ Contributions are what make the open source community such an amazing place to l
             </p>
         </td>
         <td>
-            <p align="center">
+            <p >
                 <br />
                 <a href="https://marketplace.visualstudio.com/items?itemName=checkmarx.checkmarx-ast-azure-plugin"><strong>Marketplace  »</strong></a>
                 <br />
@@ -104,7 +104,7 @@ Contributions are what make the open source community such an amazing place to l
             </p>
         </td>
         <td>
-            <p align="center">
+            <p >
                 <br />
                 <a href="https://github.com/marketplace/actions/checkmarx-ast-github-action"><strong>Marketplace »</strong></a>
                 <br />
@@ -115,13 +115,13 @@ Contributions are what make the open source community such an amazing place to l
             </p>
         </td>
     </tr>
-    <tr align="center">
+    <tr align="center" >
         <td>
             <a href="https://github.com/jenkinsci/checkmarx-ast-scanner-plugin">
                 <img src=".images/jenkins.png" />
             </a>
         </td>
-        <td align="center">
+        <td >
             <a href="https://github.com/CheckmarxDev/ast-cli-maven-plugin">
                 <img src=".images/maven.png" />
             </a>
@@ -132,9 +132,9 @@ Contributions are what make the open source community such an amazing place to l
             </a>
         </td>
     </tr>
-    <tr>
+    <tr align="center">
         <td>
-            <p align="center">
+            <p >
                 <br />
                 <a href="https://plugins.jenkins.io/checkmarx-ast-scanner/"><strong>Marketplace »</strong></a>
                 <br />
@@ -145,7 +145,7 @@ Contributions are what make the open source community such an amazing place to l
             </p>
         </td>
         <td>
-            <p align="center">
+            <p >
                 <br />
                 <a href="https://mvnrepository.com/artifact/com.checkmarx/ast-cli-maven-plugin"><strong>Marketplace
                         »</strong></a>
@@ -157,7 +157,7 @@ Contributions are what make the open source community such an amazing place to l
             </p>
         </td>
         <td>
-            <p align="center">
+            <p >
                 <br />
                 <a href="https://plugins.jetbrains.com/plugin/17610-checkmarx-ast"><strong>Marketplace »</strong></a>
                 <br />
@@ -168,7 +168,7 @@ Contributions are what make the open source community such an amazing place to l
             </p>
         </td>
     </tr>
-    <tr>
+    <tr align="center">
         <td>
             <a href="https://github.com/Checkmarx/ast-eclipse-plugin">
                 <img src=".images/eclipse.svg" width="70%" />
@@ -185,9 +185,9 @@ Contributions are what make the open source community such an amazing place to l
             </a>
         </td>
     </tr>
-    <tr>
+    <tr align="center">
         <td>
-            <p align="center">
+            <p >
                 <br />
                 <a href="https://marketplace.eclipse.org/content/checkmarx-ast-plugin"><strong>Marketplace »</strong></a>
                 <br />
@@ -198,7 +198,7 @@ Contributions are what make the open source community such an amazing place to l
             </p>
         </td>
         <td>
-            <p align="center">
+            <p >
                 <br />
                 <a href="https://plugins.jetbrains.com/plugin/17672-checkmarx-ast"><strong>Marketplace »</strong></a>
                 <br />
@@ -209,7 +209,7 @@ Contributions are what make the open source community such an amazing place to l
             </p>
         </td>
         <td>
-            <p align="center">
+            <p >
                 <br />
                 <a href="https://marketplace.visualstudio.com/items?itemName=checkmarx.ast-results"><strong>Marketplace
                         »</strong></a>
