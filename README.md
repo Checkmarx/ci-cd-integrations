@@ -299,7 +299,7 @@ Contributions are what make the open source community such an amazing place to l
     <tr align="center">
         <td>
             <p >
-                <span><strong>Circle CI</strong><span>
+                <span><strong>SCA Resolver</strong><span>
                 <br />
                 <a href="https://sca-downloads.s3.amazonaws.com/cli/latest/ScaResolver-linux64.tar.gz"><strong>Download »</strong></a>
                 <br />
@@ -321,7 +321,7 @@ Contributions are what make the open source community such an amazing place to l
         </td>
         <td>
             <p >
-                <span><strong>Gitlab</strong><span>
+                <span><strong>Circle CI</strong><span>
                 <br />
                 <a href="https://checkmarx.atlassian.net/l/c/G2gkFTHk"><strong>Documentation »</strong></a>
                 <br />
