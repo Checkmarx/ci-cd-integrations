@@ -60,21 +60,21 @@ Contributions are what make the open source community such an amazing place to l
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## Other plugins
+## Checkmarx AST Integrations
 
 <table>
     <tr align="center">
-        <td width="33%">
+        <td width="25%">
             <a href="https://github.com/Checkmarx/ast-cli/" target="_blank">
                 <img src=".images/cli.png" />
             </a>
         </td>
-        <td width="33%">
+        <td width="25%">
             <a href="https://github.com/Checkmarx/ast-azure-plugin" target="_blank">
                 <img src=".images/azure.svg" />
             </a>
         </td>
-        <td width="33%">
+        <td width="25%">
             <a href="https://github.com/Checkmarx/ast-cli/#gh-light-mode-only" target="_blank">
                 <img src=".images/github.png" />
             </a>
@@ -83,6 +83,7 @@ Contributions are what make the open source community such an amazing place to l
     <tr align="center">
         <td>
             <p >
+                <span><strong>CLI</strong><span>
                 <br />
                 <a href="https://github.com/Checkmarx/homebrew-ast-cli"><strong>Homebrew »</strong></a>
                 <br />
@@ -93,7 +94,8 @@ Contributions are what make the open source community such an amazing place to l
             </p>
         </td>
         <td>
-            <p >
+            <p>
+                <span><strong>Azure Devops</strong><span>
                 <br />
                 <a href="https://marketplace.visualstudio.com/items?itemName=checkmarx.checkmarx-ast-azure-plugin"><strong>Marketplace  »</strong></a>
                 <br />
@@ -105,6 +107,7 @@ Contributions are what make the open source community such an amazing place to l
         </td>
         <td>
             <p >
+                <span><strong>Github Action</strong><span>
                 <br />
                 <a href="https://github.com/marketplace/actions/checkmarx-ast-github-action"><strong>Marketplace »</strong></a>
                 <br />
@@ -135,6 +138,7 @@ Contributions are what make the open source community such an amazing place to l
     <tr align="center">
         <td>
             <p >
+                <span><strong>Jenkins</strong><span>
                 <br />
                 <a href="https://plugins.jenkins.io/checkmarx-ast-scanner/"><strong>Marketplace »</strong></a>
                 <br />
@@ -146,6 +150,7 @@ Contributions are what make the open source community such an amazing place to l
         </td>
         <td>
             <p >
+                <span><strong>Maven</strong><span>
                 <br />
                 <a href="https://mvnrepository.com/artifact/com.checkmarx/ast-cli-maven-plugin"><strong>Marketplace
                         »</strong></a>
@@ -158,6 +163,7 @@ Contributions are what make the open source community such an amazing place to l
         </td>
         <td>
             <p >
+                <span><strong>TeamCity</strong><span>
                 <br />
                 <a href="https://plugins.jetbrains.com/plugin/17610-checkmarx-ast"><strong>Marketplace »</strong></a>
                 <br />
@@ -188,6 +194,7 @@ Contributions are what make the open source community such an amazing place to l
     <tr align="center">
         <td>
             <p >
+                <span><strong>Eclipse</strong><span>
                 <br />
                 <a href="https://marketplace.eclipse.org/content/checkmarx-ast-plugin"><strong>Marketplace »</strong></a>
                 <br />
@@ -199,6 +206,7 @@ Contributions are what make the open source community such an amazing place to l
         </td>
         <td>
             <p >
+                <span><strong>Jetbrains IDEs</strong><span>
                 <br />
                 <a href="https://plugins.jetbrains.com/plugin/17672-checkmarx-ast"><strong>Marketplace »</strong></a>
                 <br />
@@ -210,6 +218,7 @@ Contributions are what make the open source community such an amazing place to l
         </td>
         <td>
             <p >
+                <span><strong>Visual Studio Code</strong><span>
                 <br />
                 <a href="https://marketplace.visualstudio.com/items?itemName=checkmarx.ast-results"><strong>Marketplace
                         »</strong></a>
@@ -221,13 +230,113 @@ Contributions are what make the open source community such an amazing place to l
             </p>
         </td>
     </tr>
+    <tr align="center">
+        <td>
+            <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/feature/improve_readme/Bamboo/bamboo-specs">
+                <img src=".images/bamboo.png"/>
+            </a>
+        </td>
+        <td>
+            <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/feature/improve_readme/Bitbucket">
+                <img src=".images/bitbucket.png" />
+            </a>
+        </td>
+                <td>
+            <a href="https://github.com/Checkmarx/ast-vscode-extension">
+                <img src=".images/sonar.png" width="70%" />
+            </a>
+        </td>
+    </tr>
+    <tr align="center">
+        <td>
+            <p >
+                <span><strong>Bamboo</strong><span>
+                <br />
+                <a href="https://checkmarx.atlassian.net/l/c/LancwGTh"><strong>Documentation »</strong></a>
+                <br />
+                <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/main/Bamboo/bamboo-specs"><strong>Example »</strong></a>
+                <br />
+            </p>
+        </td>
+        <td>
+            <p >
+                <span><strong>Bitbucket</strong><span>
+                <br />
+                <a href="https://checkmarx.atlassian.net/l/c/Ntx1fA18"><strong>Documentation »</strong></a>
+                <br />
+                <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/main/Bitbucket"><strong>Example »</strong></a>
+                <br />
+            </p>
+        </td>
+        <td>
+            <p >
+                <span><strong>Sonar</strong><span>
+                <br />
+                <a href="https://checkmarx.atlassian.net/l/c/B77q2n70"><strong>Documentation »</strong></a>
+                <br />
+                <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/main/Sonar"><strong>Example »</strong></a>
+                <br />
+            </p>
+        </td>
+    </tr>
+    <tr align="center">
+        <td>
+            <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/feature/improve_readme/Bamboo/bamboo-specs">
+                <img src=".images/cli.png"/>
+            </a>
+        </td>
+        <td>
+            <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/feature/improve_readme/Bitbucket">
+                <img src=".images/gitlab.png" />
+            </a>
+        </td>
+        <td>
+            <a href="https://github.com/Checkmarx/ast-vscode-extension">
+                <img src=".images/circleci.png" />
+            </a>
+        </td>
+    </tr>
+    <tr align="center">
+        <td>
+            <p >
+                <span><strong>Circle CI</strong><span>
+                <br />
+                <a href="https://sca-downloads.s3.amazonaws.com/cli/latest/ScaResolver-linux64.tar.gz"><strong>Download »</strong></a>
+                <br />
+                <a href="https://checkmarx.atlassian.net/l/c/MFWfJHpT"><strong>Documentation »</strong></a>
+                <br />
+                <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/main/CxScaResolver"><strong>Example »</strong></a>
+                <br />
+            </p>
+        </td>
+        <td>
+            <p >
+                <span><strong>Gitlab</strong><span>
+                <br />
+                <a href="https://checkmarx.atlassian.net/l/c/q42bK11Q"><strong>Documentation »</strong></a>
+                <br />
+                <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/main/GitlabCICD/v1"><strong>Example »</strong></a>
+                <br />
+            </p>
+        </td>
+        <td>
+            <p >
+                <span><strong>Gitlab</strong><span>
+                <br />
+                <a href="https://checkmarx.atlassian.net/l/c/G2gkFTHk"><strong>Documentation »</strong></a>
+                <br />
+                <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/main/CircleCI"><strong>Example »</strong></a>
+                <br />
+            </p>
+        </td>
+    </tr>
 </table>
 
 
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the [Apache 2.0](LICENSE). See `LICENSE` for more information.
 
 <!-- CONTACT -->
 ## Contact
