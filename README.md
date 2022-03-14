@@ -85,11 +85,11 @@ Contributions are what make the open source community such an amazing place to l
             <p >
                 <span><strong>CLI</strong><span>
                 <br />
-                <a href="https://github.com/Checkmarx/homebrew-ast-cli"><strong>Homebrew »</strong></a>
+                <a href="https://github.com/Checkmarx/homebrew-ast-cli" target="_blank"><strong>Homebrew »</strong></a>
                 <br />
-                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/2445443121/CLI+Tool"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/2445443121/CLI+Tool" target="_blank"><strong>Documentation »</strong></a>
                 <br />
-                <a href="https://github.com/Checkmarx/ast-cli"><strong>Source code »</strong></a>
+                <a href="https://github.com/Checkmarx/ast-cli" target="_blank"><strong>Source code »</strong></a>
                 <br />
             </p>
         </td>
@@ -97,11 +97,11 @@ Contributions are what make the open source community such an amazing place to l
             <p>
                 <span><strong>Azure Devops</strong><span>
                 <br />
-                <a href="https://marketplace.visualstudio.com/items?itemName=checkmarx.checkmarx-ast-azure-plugin"><strong>Marketplace  »</strong></a>
+                <a href="https://marketplace.visualstudio.com/items?itemName=checkmarx.checkmarx-ast-azure-plugin" target="_blank"><strong>Marketplace  »</strong></a>
                 <br />
-                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/5938544894/Quick+Start+Guide+-+CxAST+Azure+DevOps+Plugin"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/5938544894/Quick+Start+Guide+-+CxAST+Azure+DevOps+Plugin" target="_blank"><strong>Documentation »</strong></a>
                 <br />
-                <a href="https://github.com/Checkmarx/ast-azure-plugin"><strong>Source code »</strong></a>
+                <a href="https://github.com/Checkmarx/ast-azure-plugin" target="_blank"><strong>Source code »</strong></a>
                 <br />
             </p>
         </td>
@@ -109,28 +109,28 @@ Contributions are what make the open source community such an amazing place to l
             <p >
                 <span><strong>Github Action</strong><span>
                 <br />
-                <a href="https://github.com/marketplace/actions/checkmarx-ast-github-action"><strong>Marketplace »</strong></a>
+                <a href="https://github.com/marketplace/actions/checkmarx-ast-github-action" target="_blank"><strong>Marketplace »</strong></a>
                 <br />
-                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/3080454799/Quick+Start+Guide+-+CxAST+GitHub+Action"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/3080454799/Quick+Start+Guide+-+CxAST+GitHub+Action" target="_blank" ><strong>Documentation »</strong></a>
                 <br />
-                <a href="https://github.com/Checkmarx/ast-github-action"><strong>Source code »</strong></a>
+                <a href="https://github.com/Checkmarx/ast-github-action" target="_blank"><strong>Source code »</strong></a>
                 <br />
             </p>
         </td>
     </tr>
     <tr align="center" >
         <td>
-            <a href="https://github.com/jenkinsci/checkmarx-ast-scanner-plugin">
+            <a href="https://github.com/jenkinsci/checkmarx-ast-scanner-plugin" target="_blank">
                 <img src=".images/jenkins.png" />
             </a>
         </td>
         <td >
-            <a href="https://github.com/CheckmarxDev/ast-cli-maven-plugin">
+            <a href="https://github.com/CheckmarxDev/ast-cli-maven-plugin" target="_blank">
                 <img src=".images/maven.png" />
             </a>
         </td>
         <td>
-            <a href="https://github.com/Checkmarx/ast-teamcity-plugin">
+            <a href="https://github.com/Checkmarx/ast-teamcity-plugin" target="_blank">
                 <img src=".images/teamcity.png" />
             </a>
         </td>
@@ -140,11 +140,11 @@ Contributions are what make the open source community such an amazing place to l
             <p >
                 <span><strong>Jenkins</strong><span>
                 <br />
-                <a href="https://plugins.jenkins.io/checkmarx-ast-scanner/"><strong>Marketplace »</strong></a>
+                <a href="https://plugins.jenkins.io/checkmarx-ast-scanner/" target="_blank"><strong>Marketplace »</strong></a>
                 <br />
-                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/2966164587/Jenkins+Plugin"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/2966164587/Jenkins+Plugin" target="_blank"><strong>Documentation »</strong></a>
                 <br />
-                <a href="https://github.com/jenkinsci/checkmarx-ast-scanner-plugin"><strong>Source code »</strong></a>
+                <a href="https://github.com/jenkinsci/checkmarx-ast-scanner-plugin" target="_blank"><strong>Source code »</strong></a>
                 <br />
             </p>
         </td>
@@ -152,12 +152,12 @@ Contributions are what make the open source community such an amazing place to l
             <p >
                 <span><strong>Maven</strong><span>
                 <br />
-                <a href="https://mvnrepository.com/artifact/com.checkmarx/ast-cli-maven-plugin"><strong>Marketplace
+                <a href="https://mvnrepository.com/artifact/com.checkmarx/ast-cli-maven-plugin" target="_blank"><strong>Marketplace
                         »</strong></a>
                 <br />
-                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6138626217/CxAST+Maven+Plugin"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6138626217/CxAST+Maven+Plugin" target="_blank"><strong>Documentation »</strong></a>
                 <br />
-                <a href="https://github.com/CheckmarxDev/ast-cli-maven-plugin"><strong>Source code »</strong></a>
+                <a href="https://github.com/CheckmarxDev/ast-cli-maven-plugin" target="_blank"><strong>Source code »</strong></a>
                 <br />
             </p>
         </td>
@@ -165,29 +165,29 @@ Contributions are what make the open source community such an amazing place to l
             <p >
                 <span><strong>TeamCity</strong><span>
                 <br />
-                <a href="https://plugins.jetbrains.com/plugin/17610-checkmarx-ast"><strong>Marketplace »</strong></a>
+                <a href="https://plugins.jetbrains.com/plugin/17610-checkmarx-ast" target="_blank"><strong>Marketplace »</strong></a>
                 <br />
-                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6023875112/TeamCity+Plugin"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6023875112/TeamCity+Plugin" target="_blank"><strong>Documentation »</strong></a>
                 <br />
-                <a href="https://github.com/Checkmarx/ast-teamcity-plugin"><strong>Source code »</strong></a>
+                <a href="https://github.com/Checkmarx/ast-teamcity-plugin" target="_blank"><strong>Source code »</strong></a>
                 <br />
             </p>
         </td>
     </tr>
     <tr align="center">
         <td>
-            <a href="https://github.com/Checkmarx/ast-eclipse-plugin">
+            <a href="https://github.com/Checkmarx/ast-eclipse-plugin" target="_blank">
                 <img src=".images/eclipse.svg" width="70%" />
             </a>
         </td>
         <td>
-            <a href="https://github.com/Checkmarx/ast-jetbrains-plugin">
-                <img src=".images/jetbrains.png" />
+            <a href="https://github.com/Checkmarx/ast-jetbrains-plugin" target="_blank">
+                <img src=".images/jetbrains.png" width="70%" />
             </a>
         </td>
         <td>
-            <a href="https://github.com/Checkmarx/ast-vscode-extension">
-                <img src=".images/vscode.png" />
+            <a href="https://github.com/Checkmarx/ast-vscode-extension" target="_blank">
+                <img src=".images/vscode.png" width="70%"/>
             </a>
         </td>
     </tr>
@@ -196,11 +196,11 @@ Contributions are what make the open source community such an amazing place to l
             <p >
                 <span><strong>Eclipse</strong><span>
                 <br />
-                <a href="https://marketplace.eclipse.org/content/checkmarx-ast-plugin"><strong>Marketplace »</strong></a>
+                <a href="https://marketplace.eclipse.org/content/checkmarx-ast-plugin" target="_blank"><strong>Marketplace »</strong></a>
                 <br />
-                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6080692227"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6080692227" target="_blank"><strong>Documentation »</strong></a>
                 <br />
-                <a href="https://github.com/Checkmarx/ast-eclipse-plugin"><strong>Source code »</strong></a>
+                <a href="https://github.com/Checkmarx/ast-eclipse-plugin" target="_blank"><strong>Source code »</strong></a>
                 <br />
             </p>
         </td>
@@ -208,11 +208,11 @@ Contributions are what make the open source community such an amazing place to l
             <p >
                 <span><strong>Jetbrains IDEs</strong><span>
                 <br />
-                <a href="https://plugins.jetbrains.com/plugin/17672-checkmarx-ast"><strong>Marketplace »</strong></a>
+                <a href="https://plugins.jetbrains.com/plugin/17672-checkmarx-ast" target="_blank"><strong>Marketplace »</strong></a>
                 <br />
-                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6030557208/JetBrains"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6030557208/JetBrains" target="_blank"><strong>Documentation »</strong></a>
                 <br />
-                <a href="https://github.com/Checkmarx/ast-jetbrains-plugin"><strong>Source code »</strong></a>
+                <a href="https://github.com/Checkmarx/ast-jetbrains-plugin" target="_blank"><strong>Source code »</strong></a>
                 <br />
             </p>
         </td>
@@ -220,29 +220,28 @@ Contributions are what make the open source community such an amazing place to l
             <p >
                 <span><strong>Visual Studio Code</strong><span>
                 <br />
-                <a href="https://marketplace.visualstudio.com/items?itemName=checkmarx.ast-results"><strong>Marketplace
-                        »</strong></a>
+                <a href="https://marketplace.visualstudio.com/items?itemName=checkmarx.ast-results" target="_blank"><strong>Marketplace »</strong></a>
                 <br />
-                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6080692227"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6080692227" target="_blank"><strong>Documentation »</strong></a>
                 <br />
-                <a href="https://github.com/Checkmarx/ast-vscode-extension"><strong>Source code »</strong></a>
+                <a href="https://github.com/Checkmarx/ast-vscode-extension" target="_blank"><strong>Source code »</strong></a>
                 <br />
             </p>
         </td>
     </tr>
     <tr align="center">
         <td>
-            <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/feature/improve_readme/Bamboo/bamboo-specs">
+            <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/feature/improve_readme/Bamboo/bamboo-specs" target="_blank">
                 <img src=".images/bamboo.png"/>
             </a>
         </td>
         <td>
-            <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/feature/improve_readme/Bitbucket">
+            <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/feature/improve_readme/Bitbucket" target="_blank">
                 <img src=".images/bitbucket.png" />
             </a>
         </td>
-                <td>
-            <a href="https://github.com/Checkmarx/ast-vscode-extension">
+        <td>
+            <a href="https://github.com/Checkmarx/ast-vscode-extension" target="_blank">
                 <img src=".images/sonar.png" width="70%" />
             </a>
         </td>
@@ -252,9 +251,9 @@ Contributions are what make the open source community such an amazing place to l
             <p >
                 <span><strong>Bamboo</strong><span>
                 <br />
-                <a href="https://checkmarx.atlassian.net/l/c/LancwGTh"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.atlassian.net/l/c/LancwGTh" target="_blank"><strong>Documentation »</strong></a>
                 <br />
-                <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/main/Bamboo/bamboo-specs"><strong>Example »</strong></a>
+                <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/main/Bamboo/bamboo-specs" target="_blank"><strong>Example »</strong></a>
                 <br />
             </p>
         </td>
@@ -262,9 +261,9 @@ Contributions are what make the open source community such an amazing place to l
             <p >
                 <span><strong>Bitbucket</strong><span>
                 <br />
-                <a href="https://checkmarx.atlassian.net/l/c/Ntx1fA18"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.atlassian.net/l/c/Ntx1fA18" target="_blank"><strong>Documentation »</strong></a>
                 <br />
-                <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/main/Bitbucket"><strong>Example »</strong></a>
+                <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/main/Bitbucket" target="_blank"><strong>Example »</strong></a>
                 <br />
             </p>
         </td>
@@ -272,26 +271,26 @@ Contributions are what make the open source community such an amazing place to l
             <p >
                 <span><strong>Sonar</strong><span>
                 <br />
-                <a href="https://checkmarx.atlassian.net/l/c/B77q2n70"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.atlassian.net/l/c/B77q2n70" target="_blank"><strong>Documentation »</strong></a>
                 <br />
-                <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/main/Sonar"><strong>Example »</strong></a>
+                <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/main/Sonar" target="_blank"><strong>Example »</strong></a>
                 <br />
             </p>
         </td>
     </tr>
     <tr align="center">
         <td>
-            <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/feature/improve_readme/Bamboo/bamboo-specs">
+            <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/feature/improve_readme/Bamboo/bamboo-specs" target="_blank">
                 <img src=".images/cli.png"/>
             </a>
         </td>
         <td>
-            <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/feature/improve_readme/Bitbucket">
+            <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/feature/improve_readme/Bitbucket" target="_blank">
                 <img src=".images/gitlab.png" />
             </a>
         </td>
         <td>
-            <a href="https://github.com/Checkmarx/ast-vscode-extension">
+            <a href="https://github.com/Checkmarx/ast-vscode-extension" target="_blank">
                 <img src=".images/circleci.png" />
             </a>
         </td>
@@ -301,11 +300,11 @@ Contributions are what make the open source community such an amazing place to l
             <p >
                 <span><strong>SCA Resolver</strong><span>
                 <br />
-                <a href="https://sca-downloads.s3.amazonaws.com/cli/latest/ScaResolver-linux64.tar.gz"><strong>Download »</strong></a>
+                <a href="https://sca-downloads.s3.amazonaws.com/cli/latest/ScaResolver-linux64.tar.gz" target="_blank"><strong>Download »</strong></a>
                 <br />
-                <a href="https://checkmarx.atlassian.net/l/c/MFWfJHpT"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.atlassian.net/l/c/MFWfJHpT" target="_blank"><strong>Documentation »</strong></a>
                 <br />
-                <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/main/CxScaResolver"><strong>Example »</strong></a>
+                <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/main/CxScaResolver" target="_blank"><strong>Example »</strong></a>
                 <br />
             </p>
         </td>
@@ -313,9 +312,9 @@ Contributions are what make the open source community such an amazing place to l
             <p >
                 <span><strong>Gitlab</strong><span>
                 <br />
-                <a href="https://checkmarx.atlassian.net/l/c/q42bK11Q"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.atlassian.net/l/c/q42bK11Q" target="_blank"><strong>Documentation »</strong></a>
                 <br />
-                <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/main/GitlabCICD/v1"><strong>Example »</strong></a>
+                <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/main/GitlabCICD/v1" target="_blank"><strong>Example »</strong></a>
                 <br />
             </p>
         </td>
@@ -323,9 +322,9 @@ Contributions are what make the open source community such an amazing place to l
             <p >
                 <span><strong>Circle CI</strong><span>
                 <br />
-                <a href="https://checkmarx.atlassian.net/l/c/G2gkFTHk"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.atlassian.net/l/c/G2gkFTHk" target="_blank"><strong>Documentation »</strong></a>
                 <br />
-                <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/main/CircleCI"><strong>Example »</strong></a>
+                <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/main/CircleCI" target="_blank"><strong>Example »</strong></a>
                 <br />
             </p>
         </td>
