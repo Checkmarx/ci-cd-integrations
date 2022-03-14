@@ -346,7 +346,7 @@ Checkmarx Team
 Project Link: [https://github.com/checkmarx/ci-cd-integrations](https://github.com/checkmarx/ci-cd-integrations)
 
 
-© 2021 Checkmarx Ltd. All Rights Reserved.
+© 2022 Checkmarx Ltd. All Rights Reserved.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [contributors-shield]: https://img.shields.io/github/contributors/checkmarx/ci-cd-integrations.svg
