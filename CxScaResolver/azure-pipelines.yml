@@ -1,0 +1,28 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+  - main
+  
+pool:
+  vmImage: ubuntu-latest
+  
+steps:
+  - task: CmdLine@2
+    displayName: Sca Resolver
+    inputs:
+      script: >
+        wget https://sca-downloads.s3.amazonaws.com/cli/latest/ScaResolver-linux64.tar.gz
+  
+        tar -xzvf ScaResolver-linux64.tar.gz
+  
+        rm -rf ScaResolver-linux64.tar.gz 
+        
+  - task: checkmarx.checkmarx-ast-azure-plugin.cx-scan-task.Checkmarx AST@2
+    displayName: 'Checkmarx AST'
+    inputs:
+      CheckmarxService: 'PPE environment' # Checkmarx Service name with credentials configured in https://dev.azure.com/
+      tenantName: 'research_tenant'
+      additionalParams:  --sca-resolver ./ScaResolver
