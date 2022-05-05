@@ -28,8 +28,8 @@ steps:
   - task: checkmarx.checkmarx-ast-azure-plugin.cx-scan-task.Checkmarx AST@2
     displayName: 'Checkmarx AST'
     inputs:
-      CheckmarxService: 'PPE environment' # Checkmarx Service name with credentials configured in https://dev.azure.com/
+      CheckmarxService: 'Azure service connection name or id' # Checkmarx Service name with credentials configured in https://dev.azure.com/
       projectName: $(Build.Repository.Name)
       branchName: $(Build.SourceBranchName)
-      tenantName: research_tenant
+      tenantName: assigned_tenant_name
       additionalParams:  --sca-resolver ./ScaResolver
