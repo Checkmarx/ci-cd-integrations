@@ -18,6 +18,12 @@ steps:
         tar -xzvf ScaResolver-linux64.tar.gz
   
         rm -rf ScaResolver-linux64.tar.gz 
+
+  - task: CmdLine@2
+    displayName: Sca Resolver package management step  
+    inputs:
+      script: >
+            sudo apt install maven npm
         
   - task: checkmarx.checkmarx-ast-azure-plugin.cx-scan-task.Checkmarx AST@2
     displayName: 'Checkmarx AST'
@@ -27,4 +33,3 @@ steps:
       branchName: $(Build.SourceBranchName)
       tenantName: research_tenant
       additionalParams:  --sca-resolver ./ScaResolver
-      
