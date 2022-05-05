@@ -24,5 +24,7 @@ steps:
     displayName: 'Checkmarx AST'
     inputs:
       CheckmarxService: 'PPE environment' # Checkmarx Service name with credentials configured in https://dev.azure.com/
+      projectName: TestProject
+      branchName: main
       tenantName: 'research_tenant'
       additionalParams:  --sca-resolver ./ScaResolver
