@@ -1,7 +1,6 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+# Documentation:
+# https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6147408761/CI+CD+with+CxSCA+Resolver
+#
 
 trigger:
   - main
@@ -24,7 +23,8 @@ steps:
     displayName: 'Checkmarx AST'
     inputs:
       CheckmarxService: 'PPE environment' # Checkmarx Service name with credentials configured in https://dev.azure.com/
-      projectName: TestProject
-      branchName: main
-      tenantName: 'research_tenant'
+      projectName: $(Build.Repository.Name)
+      branchName: $(Build.SourceBranchName)
+      tenantName: research_tenant
       additionalParams:  --sca-resolver ./ScaResolver
+      
