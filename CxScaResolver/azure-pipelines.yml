@@ -33,3 +33,4 @@ steps:
       branchName: $(Build.SourceBranchName)
       tenantName: assigned_tenant_name
       additionalParams:  --sca-resolver ./ScaResolver
+
