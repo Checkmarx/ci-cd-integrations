@@ -1,0 +1,35 @@
+# Documentation:
+# https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6147408761/CI+CD+with+CxSCA+Resolver
+#
+
+trigger:
+  - main
+  
+pool:
+  vmImage: ubuntu-latest
+  
+steps:
+  - task: CmdLine@2
+    displayName: Sca Resolver
+    inputs:
+      script: >
+        wget https://sca-downloads.s3.amazonaws.com/cli/latest/ScaResolver-linux64.tar.gz
+  
+        tar -xzvf ScaResolver-linux64.tar.gz
+  
+        rm -rf ScaResolver-linux64.tar.gz 
+
+  - task: CmdLine@2
+    displayName: Sca Resolver package management step  
+    inputs:
+      script: >
+            sudo apt install maven npm
+        
+  - task: checkmarx.checkmarx-ast-azure-plugin.cx-scan-task.Checkmarx AST@2
+    displayName: 'Checkmarx AST'
+    inputs:
+      CheckmarxService: 'Azure service connection name or id' # Checkmarx Service name with credentials configured in https://dev.azure.com/
+      projectName: $(Build.Repository.Name)
+      branchName: $(Build.SourceBranchName)
+      tenantName: assigned_tenant_name
+      additionalParams:  --sca-resolver ./ScaResolver

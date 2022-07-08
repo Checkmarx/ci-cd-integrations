@@ -36,7 +36,7 @@ jobs:
           restore-keys: ${{ runner.os }}-sonar
 
       - name: Checkmarx AST CLI Action
-        uses: Checkmarx/ast-github-action@master
+        uses: checkmarx/ast-github-action@main
         with:
             project_name: <your_project_name>
             base_uri: <AST Base URI>
