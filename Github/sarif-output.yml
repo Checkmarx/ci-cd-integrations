@@ -28,7 +28,7 @@ jobs:
           base_uri: https://ast.checkmarx.net
           cx_client_id: ${{ secrets.CX_CLIENT_ID }}
           cx_client_secret: ${{ secrets.CX_CLIENT_SECRET }}
-          cx_tenant: ${{ secrets.CX_TENANT }}
+          cx_tenant: ${{ secrets.CX_TENANT }} # This should be replaced by users' tenant name
           additional_params: --report-format sarif --output-path .
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v1
