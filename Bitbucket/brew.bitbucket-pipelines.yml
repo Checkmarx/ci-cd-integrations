@@ -1,5 +1,5 @@
 # Documentation:
-# https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6142592048/Bitbucket+Pipelines
+# https://checkmarx.com/resource/documents/en/34965-68720-checkmarx-one-bitbucket-pipelines-integration.html
 #
 
 image: atlassian/default-image:2

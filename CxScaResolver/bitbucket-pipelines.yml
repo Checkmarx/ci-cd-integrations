@@ -1,5 +1,5 @@
 # Documentation:
-# https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6147408761/CI+CD+with+CxSCA+Resolver
+# https://checkmarx.com/resource/documents/en/34965-68725-using-sca-resolver-in-checkmarx-one-ci-cd-integrations.html
 #
 
 image: checkmarx/ast-cli
