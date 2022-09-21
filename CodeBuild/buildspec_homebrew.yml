@@ -1,0 +1,11 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      - eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+      - brew install checkmarx/ast-cli/ast-cli
+  build:
+    commands:
+      - cx scan create --project-name "$CX_PROJECT_NAME" --file-source "." --branch "main" --scan-info-format 'json' --agent 'CodeCommit' --base-uri "$CX_BASE_URI" --tenant "$CX_TENANT" --client-id "$CX_CLIENT_ID" --client-secret "$CX_CLIENT_SECRET"
