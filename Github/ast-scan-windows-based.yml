@@ -1,0 +1,36 @@
+#
+# Example job using github action to run a scan in a windows environment
+#
+# CLI installed using 'engineerd/configurator' action
+#
+# Configuration through environment secrets in Github
+#
+
+name: Checkmarx AST Scan
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  Scan:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Get CLI
+        uses: engineerd/configurator@v0.0.8
+        with:
+          name: "cx.exe"
+          url: "https://github.com/Checkmarx/ast-cli/releases/download/2.0.31/ast-cli_2.0.31_windows_x64.zip"
+          pathInArchive: "./cx.exe"
+      - name: Create scan
+        run: cx scan create -s . `
+          --project-name ${{ secrets.CX_PROJECT_NAME }} `
+          --branch ${{ secrets.CX_BRANCH }} `
+          --base-uri ${{ secrets.CX_BASE_URI }} `
+          --tenant ${{ secrets.CX_TENANT }} `
+          --client-id ${{ secrets.CX_CLIENT_ID }} `
+          --client-secret ${{ secrets.CX_CLIENT_SECRET }} `
+          ${{ secrets.CX_ADDITIONAL_PARAMS }}
