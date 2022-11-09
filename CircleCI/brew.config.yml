@@ -6,7 +6,7 @@
 # Configuration through environment variables in CircleCI
 #
 # Documentation:
-# https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6142591258/CircleCI
+# https://checkmarx.com/resource/documents/en/34965-68721-checkmarx-one-circleci-integration.html
 #
 
 version: 2

@@ -19,7 +19,7 @@
 
   <p  align="center" >
     <br />
-    <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6141870542/CxAST+CLI+Integrations+for+CI+CD" target="_blank"><strong>AST CLI Integrations the docs »</strong></a>
+    <a href="https://checkmarx.com/resource/documents/en/34965-68684-checkmarx-one-ci-cd-integrations.html" target="_blank"><strong>AST CLI Integrations the docs »</strong></a>
     <br />
     <br />
   </p>
@@ -87,7 +87,7 @@ Contributions are what make the open source community such an amazing place to l
                 <br />
                 <a href="https://github.com/Checkmarx/homebrew-ast-cli" target="_blank"><strong>Homebrew »</strong></a>
                 <br />
-                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/2445443121/CLI+Tool" target="_blank"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.com/resource/documents/en/34965-68620-checkmarx-one-cli-tool.html" target="_blank"><strong>Documentation »</strong></a>
                 <br />
                 <a href="https://github.com/Checkmarx/ast-cli" target="_blank"><strong>Source code »</strong></a>
                 <br />
@@ -99,7 +99,7 @@ Contributions are what make the open source community such an amazing place to l
                 <br />
                 <a href="https://marketplace.visualstudio.com/items?itemName=checkmarx.checkmarx-ast-azure-plugin" target="_blank"><strong>Marketplace  »</strong></a>
                 <br />
-                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/5938544894/Quick+Start+Guide+-+CxAST+Azure+DevOps+Plugin" target="_blank"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.com/resource/documents/en/34965-68709-checkmarx-one-azure-devops-plugin.html" target="_blank"><strong>Documentation »</strong></a>
                 <br />
                 <a href="https://github.com/Checkmarx/ast-azure-plugin" target="_blank"><strong>Source code »</strong></a>
                 <br />
@@ -111,7 +111,7 @@ Contributions are what make the open source community such an amazing place to l
                 <br />
                 <a href="https://github.com/marketplace/actions/checkmarx-ast-github-action" target="_blank"><strong>Marketplace »</strong></a>
                 <br />
-                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/3080454799/Quick+Start+Guide+-+CxAST+GitHub+Action" target="_blank" ><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.com/resource/documents/en/34965-68702-checkmarx-one-github-actions.html" target="_blank" ><strong>Documentation »</strong></a>
                 <br />
                 <a href="https://github.com/Checkmarx/ast-github-action" target="_blank"><strong>Source code »</strong></a>
                 <br />
@@ -142,7 +142,7 @@ Contributions are what make the open source community such an amazing place to l
                 <br />
                 <a href="https://plugins.jenkins.io/checkmarx-ast-scanner/" target="_blank"><strong>Marketplace »</strong></a>
                 <br />
-                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/2966164587/Jenkins+Plugin" target="_blank"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.com/resource/documents/en/34965-68685-checkmarx-one-jenkins-plugin.html" target="_blank"><strong>Documentation »</strong></a>
                 <br />
                 <a href="https://github.com/jenkinsci/checkmarx-ast-scanner-plugin" target="_blank"><strong>Source code »</strong></a>
                 <br />
@@ -155,7 +155,7 @@ Contributions are what make the open source community such an amazing place to l
                 <a href="https://mvnrepository.com/artifact/com.checkmarx/ast-cli-maven-plugin" target="_blank"><strong>Marketplace
                         »</strong></a>
                 <br />
-                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6138626217/CxAST+Maven+Plugin" target="_blank"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.com/resource/documents/en/34965-68718-checkmarx-one-maven-plugin.html" target="_blank"><strong>Documentation »</strong></a>
                 <br />
                 <a href="https://github.com/CheckmarxDev/ast-cli-maven-plugin" target="_blank"><strong>Source code »</strong></a>
                 <br />
@@ -167,7 +167,7 @@ Contributions are what make the open source community such an amazing place to l
                 <br />
                 <a href="https://plugins.jetbrains.com/plugin/17610-checkmarx-ast" target="_blank"><strong>Marketplace »</strong></a>
                 <br />
-                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6023875112/TeamCity+Plugin" target="_blank"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.com/resource/documents/en/34965-68696-checkmarx-one-teamcity-plugin.html" target="_blank"><strong>Documentation »</strong></a>
                 <br />
                 <a href="https://github.com/Checkmarx/ast-teamcity-plugin" target="_blank"><strong>Source code »</strong></a>
                 <br />
@@ -198,7 +198,7 @@ Contributions are what make the open source community such an amazing place to l
                 <br />
                 <a href="https://marketplace.eclipse.org/content/checkmarx-ast-plugin" target="_blank"><strong>Marketplace »</strong></a>
                 <br />
-                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6080692227" target="_blank"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.com/resource/documents/en/34965-68728-checkmarx-one-eclipse-plugin.html" target="_blank"><strong>Documentation »</strong></a>
                 <br />
                 <a href="https://github.com/Checkmarx/ast-eclipse-plugin" target="_blank"><strong>Source code »</strong></a>
                 <br />
@@ -210,7 +210,7 @@ Contributions are what make the open source community such an amazing place to l
                 <br />
                 <a href="https://plugins.jetbrains.com/plugin/17672-checkmarx-ast" target="_blank"><strong>Marketplace »</strong></a>
                 <br />
-                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6030557208/JetBrains" target="_blank"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.com/resource/documents/en/34965-68733-checkmarx-one-jetbrains-plugin.html" target="_blank"><strong>Documentation »</strong></a>
                 <br />
                 <a href="https://github.com/Checkmarx/ast-jetbrains-plugin" target="_blank"><strong>Source code »</strong></a>
                 <br />
@@ -222,7 +222,7 @@ Contributions are what make the open source community such an amazing place to l
                 <br />
                 <a href="https://marketplace.visualstudio.com/items?itemName=checkmarx.ast-results" target="_blank"><strong>Marketplace »</strong></a>
                 <br />
-                <a href="https://checkmarx.atlassian.net/wiki/spaces/AST/pages/6080692227" target="_blank"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.com/resource/documents/en/34965-68742-checkmarx-one-visual-studio-code-extension--plugin-.html" target="_blank"><strong>Documentation »</strong></a>
                 <br />
                 <a href="https://github.com/Checkmarx/ast-vscode-extension" target="_blank"><strong>Source code »</strong></a>
                 <br />
@@ -251,7 +251,7 @@ Contributions are what make the open source community such an amazing place to l
             <p >
                 <span><strong>Bamboo</strong><span>
                 <br />
-                <a href="https://checkmarx.atlassian.net/l/c/LancwGTh" target="_blank"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.com/resource/documents/en/34965-68723-checkmarx-one-bamboo-integration.html" target="_blank"><strong>Documentation »</strong></a>
                 <br />
                 <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/main/Bamboo/bamboo-specs" target="_blank"><strong>Example »</strong></a>
                 <br />
@@ -261,7 +261,7 @@ Contributions are what make the open source community such an amazing place to l
             <p >
                 <span><strong>Bitbucket</strong><span>
                 <br />
-                <a href="https://checkmarx.atlassian.net/l/c/Ntx1fA18" target="_blank"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.com/resource/documents/en/34965-68720-checkmarx-one-bitbucket-pipelines-integration.html" target="_blank"><strong>Documentation »</strong></a>
                 <br />
                 <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/main/Bitbucket" target="_blank"><strong>Example »</strong></a>
                 <br />
@@ -271,7 +271,7 @@ Contributions are what make the open source community such an amazing place to l
             <p >
                 <span><strong>Sonar</strong><span>
                 <br />
-                <a href="https://checkmarx.atlassian.net/l/c/B77q2n70" target="_blank"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.com/resource/documents/en/34965-68726-sonar-results-for-checkmarx-one--example-for-github-action-.html" target="_blank"><strong>Documentation »</strong></a>
                 <br />
                 <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/main/Sonar" target="_blank"><strong>Example »</strong></a>
                 <br />
@@ -302,7 +302,7 @@ Contributions are what make the open source community such an amazing place to l
                 <br />
                 <a href="https://sca-downloads.s3.amazonaws.com/cli/latest/ScaResolver-linux64.tar.gz" target="_blank"><strong>Download »</strong></a>
                 <br />
-                <a href="https://checkmarx.atlassian.net/l/c/MFWfJHpT" target="_blank"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.com/resource/documents/en/34965-68725-using-sca-resolver-in-checkmarx-one-ci-cd-integrations.html" target="_blank"><strong>Documentation »</strong></a>
                 <br />
                 <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/main/CxScaResolver" target="_blank"><strong>Example »</strong></a>
                 <br />
@@ -312,7 +312,7 @@ Contributions are what make the open source community such an amazing place to l
             <p >
                 <span><strong>Gitlab</strong><span>
                 <br />
-                <a href="https://checkmarx.atlassian.net/l/c/q42bK11Q" target="_blank"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.com/resource/documents/en/34965-68722-checkmarx-one-gitlab-integration.html" target="_blank"><strong>Documentation »</strong></a>
                 <br />
                 <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/main/GitlabCICD/v1" target="_blank"><strong>Example »</strong></a>
                 <br />
@@ -322,7 +322,7 @@ Contributions are what make the open source community such an amazing place to l
             <p >
                 <span><strong>Circle CI</strong><span>
                 <br />
-                <a href="https://checkmarx.atlassian.net/l/c/G2gkFTHk" target="_blank"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.com/resource/documents/en/34965-68721-checkmarx-one-circleci-integration.html" target="_blank"><strong>Documentation »</strong></a>
                 <br />
                 <a href="https://github.com/Checkmarx/ci-cd-integrations/tree/main/CircleCI" target="_blank"><strong>Example »</strong></a>
                 <br />
