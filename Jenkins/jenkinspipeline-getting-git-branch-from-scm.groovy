@@ -11,8 +11,8 @@ pipeline {
                             checkmarxInstallation: 'latest',
                             credentialsId: 'ce75aa2f-9a93-4fe7-98f2-87f9bdc29d93',
                             projectName: 'ast-cli',
-                            serverUrl: 'https://ast-master.dev.cxast.net/',
-                            tenantName: 'master_tenant',
+                            serverUrl: 'https://ast.checkmarx.net/',
+                            tenantName: 'my_tenant',
                             useOwnAdditionalOptions: true,
                             useOwnServerCredentials: true
                 }
