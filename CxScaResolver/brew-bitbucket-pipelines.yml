@@ -1,0 +1,28 @@
+# Documentation:
+# https://checkmarx.com/resource/documents/en/34965-68720-checkmarx-one-bitbucket-pipelines-integration.html
+#
+
+image: atlassian/default-image:2
+
+pipelines:
+  default:
+    - step:
+        script:
+          - wget https://sca-downloads.s3.amazonaws.com/cli/latest/ScaResolver-linux64.tar.gz
+          - tar -xzvf ScaResolver-linux64.tar.gz
+          - rm -rf ScaResolver-linux64.tar.gz
+          - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+          - /home/linuxbrew/.linuxbrew/bin/brew install checkmarx/ast-cli/ast-cli
+          - >-
+            /home/linuxbrew/.linuxbrew/Cellar/ast-cli/*/bin/cx
+            scan create
+            -s .
+            --agent 
+            --sca-resolver ./ScaResolver
+            --project-name $BITBUCKET_REPO_SLUG
+            --branch $BITBUCKET_BRANCH
+            --base-uri $BASE_URI
+            --tenant $TENANT
+            --client-id $CLIENT_ID
+            --client-secret $CLIENT_SECRET
+            $ADDITIONAL_PARAMS
