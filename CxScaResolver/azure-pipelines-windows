@@ -1,0 +1,31 @@
+# Documentation:
+# https://checkmarx.com/resource/documents/en/34965-68725-using-sca-resolver-in-checkmarx-one-ci-cd-integrations.html
+#
+trigger:
+  - main
+pool:
+  vmImage: windows-latest
+
+steps:
+  - task: PowerShell@2
+    inputs:
+      targetType: 'inline'
+      script: |
+        Invoke-WebRequest -OutFile ScaResolver-win64.zip -URI https://sca-downloads.s3.amazonaws.com/cli/1.13.4/ScaResolver-win64.zip
+        
+        tar.exe -xf ScaResolver-win64.zip
+        
+        Remove-Item ScaResolver-win64.zip
+
+  - task: NuGetToolInstaller@1
+    inputs:
+      versionSpec: 
+      checkLatest: true
+
+  - task: Checkmarx AST@2
+    inputs:
+      CheckmarxService: 'Azure service connection name or id' # Checkmarx Service name with credentials configured in https://dev.azure.com/
+      projectName: '$(Build.Repository.Name)'
+      branchName: '$(Build.SourceBranchName)'
+      tenantName: # Cx assigned_tenant_name
+      additionalParams: '--sca-resolver ./ScaResolver'
