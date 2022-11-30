@@ -3,6 +3,7 @@
 #
 trigger:
   - main
+  
 pool:
   vmImage: windows-latest
 
@@ -20,12 +21,11 @@ steps:
   - task: NuGetToolInstaller@1
     inputs:
       versionSpec: 
-      checkLatest: true
 
   - task: Checkmarx AST@2
     inputs:
-      CheckmarxService: 'Azure service connection name or id' # Checkmarx Service name with credentials configured in https://dev.azure.com/
+      CheckmarxService: 'Azure service connection name or id' # Checkmarx Service connection name configured in https://dev.azure.com/
       projectName: '$(Build.Repository.Name)'
       branchName: '$(Build.SourceBranchName)'
-      tenantName: # Cx assigned_tenant_name
+      tenantName: 'TENANT' # CxOne assigned tenant name
       additionalParams: '--sca-resolver ./ScaResolver'
