@@ -222,7 +222,7 @@ Contributions are what make the open source community such an amazing place to l
                 <br />
                 <a href="https://marketplace.visualstudio.com/items?itemName=checkmarx.ast-results" target="_blank"><strong>Marketplace »</strong></a>
                 <br />
-                <a href="https://checkmarx.com/resource/documents/en/34965-68742-checkmarx-one-visual-studio-code-extension--plugin-.html" target="_blank"><strong>Documentation »</strong></a>
+                <a href="https://checkmarx.com/resource/documents/en/34965-68742-checkmarx-one-vs-code-extension--plugin-.html" target="_blank"><strong>Documentation »</strong></a>
                 <br />
                 <a href="https://github.com/Checkmarx/ast-vscode-extension" target="_blank"><strong>Source code »</strong></a>
                 <br />
