@@ -31,5 +31,5 @@ steps:
       CheckmarxService: 'Azure service connection name or id' # Checkmarx Service name with credentials configured in https://dev.azure.com/
       projectName: $(Build.Repository.Name)
       branchName: $(Build.SourceBranchName)
-      tenantName: assigned_tenant_name
+      tenantName: 'tenant_name'
       additionalParams:  --sca-resolver ./ScaResolver
