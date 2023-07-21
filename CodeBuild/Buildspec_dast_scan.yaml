@@ -1,0 +1,18 @@
+---
+# AWS Codebuild Buildspec File that runs a docker container to run a CxONE DAST scan
+version: 0.2
+phases:
+  install:
+    commands:
+# Pull the 'latest' docker image for Checkmarx DAST
+      - docker pull checkmarx/dast:latest
+      
+  build:
+    commands:
+# Run a docker container from the image on the build agent
+      - docker run -e CX_APIKEY='$CX_API_KEY' -v $(pwd):/dast_home checkmarx/dast:latest web --environment-id='$ENV_ID' --config='/dast_home/<CONFIG_FILENAME>.yaml' --base-url=https://ast.checkmarx.net/ --output='/dast_home/DAST_results/dast_scan_output' --jvm-properties=-Xmx3G --log-level=trace --verbose --retry=3 --retry-delay=20
+           
+artifacts:
+  files:
+    - '**/*'
+    - '/dast_home/DAST_results/dast_scan_output'
