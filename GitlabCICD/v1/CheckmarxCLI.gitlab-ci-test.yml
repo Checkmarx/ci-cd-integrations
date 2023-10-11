@@ -1,0 +1,72 @@
+#
+# Include this file in your .gitlab-ci.yml file to automate & integrate Checkmarx security scans.
+#
+# These variables can be overridden in your .gitlab-ci.yml file or as envionrment variables.
+#
+# Find more documentation at: https://checkmarx.com/resource/documents/en/34965-68722-checkmarx-one-gitlab-integration.html
+#
+
+variables:
+    CX_BRANCH_NAME: "${CI_COMMIT_REF_NAME}"
+    CX_PROJECT_NAME: "$CI_PROJECT_NAME"
+    CX_BASE_URI: ${CX_BASE_URI}
+    CX_TENANT: ${CX_TENANT}
+    CX_CLIENT_ID: ${CX_CLIENT_ID}
+    CX_CLIENT_SECRET: ${CX_CLIENT_SECRET}
+    CX_ADDITIONAL_PARAMS: ""
+    CX_FILE_FILTERS: ""
+    CHECKMARX_DOCKER_IMAGE: "ast-cli"
+
+checkmarx-scan:
+  stage: test
+  image:
+    name: checkmarx/${CHECKMARX_DOCKER_IMAGE}
+    entrypoint: ['']
+  script:
+    - wget -O ./cxcli.tar.gz "https://github.com/Checkmarx/ast-cli/releases/download/2.0.56-gitlab-pr/ast-cli_2.0.56-gitlab-pr_linux_x64.tar.gz"
+    - tar xzvf ./cxcli.tar.gz
+    - output_file=./output.log
+    - eval "args=(${CX_ADDITIONAL_PARAMS})"
+    - >-
+      ./cx
+      scan create
+      --project-name ${CX_PROJECT_NAME}
+      --file-source '.'
+      --scan-info-format 'json'
+      --branch ${CX_BRANCH_NAME}
+      --agent 'Gitlab' 
+      --file-filter "${CX_FILE_FILTERS}"
+      "${args[@]}"
+
+mr-checkmarx-scan:
+  stage: test
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+  image:
+    name: checkmarx/${CHECKMARX_DOCKER_IMAGE}
+    entrypoint: ['']
+  script:
+    - wget -O ./cxcli.tar.gz "https://github.com/Checkmarx/ast-cli/releases/download/2.0.56-gitlab-pr/ast-cli_2.0.56-gitlab-pr_linux_x64.tar.gz"
+    - tar xzvf ./cxcli.tar.gz
+    - eval "args=(${CX_ADDITIONAL_PARAMS})"
+    - output_file=./output.log
+    - >-
+      ./cx
+      scan create
+      --project-name ${CX_PROJECT_NAME}
+      --file-source '.'
+      --scan-info-format 'json'
+      --branch ${CX_BRANCH_NAME}
+      --agent 'Gitlab' 
+      --file-filter "${CX_FILE_FILTERS}"
+      "${args[@]}"
+      | tee -i $output_file
+      exitCode=${PIPESTATUS[0]}
+    - scanId=(`grep -E '"(ID)":"((\\"|[^"])*)"' $output_file | cut -d',' -f1 | cut -d':' -f2 | tr -d '"'`)
+    - >-
+      if [ -n "$scanId" ]; then
+        echo "Creating MR decoration for scan ID:" $scanId
+        ./cx utils pr gitlab --gitlab-project-id $CI_PROJECT_ID --mr-iid $CI_MERGE_REQUEST_IID --namespace $CI_PROJECT_NAMESPACE --repo-name $CI_PROJECT_NAME --scan-id $scanId --token $CI_JOB_TOKEN
+      else
+        echo "MR decoration not created."
+      fi
