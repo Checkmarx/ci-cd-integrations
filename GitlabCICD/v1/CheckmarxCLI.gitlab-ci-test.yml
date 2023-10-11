@@ -13,6 +13,7 @@ variables:
     CX_TENANT: ${CX_TENANT}
     CX_CLIENT_ID: ${CX_CLIENT_ID}
     CX_CLIENT_SECRET: ${CX_CLIENT_SECRET}
+    GL_TOKEN: ${GL_TOKEN}
     CX_ADDITIONAL_PARAMS: ""
     CX_FILE_FILTERS: ""
     CHECKMARX_DOCKER_IMAGE: "ast-cli"
@@ -65,7 +66,7 @@ mr-checkmarx-scan:
     - >-
       if [ -n "$scanId" ]; then
         echo "Creating MR decoration for scan ID:" $scanId
-        ./cx utils pr gitlab --gitlab-project-id $CI_PROJECT_ID --mr-iid $CI_MERGE_REQUEST_IID --namespace $CI_PROJECT_NAMESPACE --repo-name $CI_PROJECT_NAME --scan-id $scanId --token $CI_JOB_TOKEN --debug
+        ./cx utils pr gitlab --gitlab-project-id $CI_PROJECT_ID --mr-iid $CI_MERGE_REQUEST_IID --namespace $CI_PROJECT_NAMESPACE --repo-name $CI_PROJECT_NAME --scan-id $scanId --token ${GL_TOKEN} --debug
       else
         echo "MR decoration not created."
       fi
