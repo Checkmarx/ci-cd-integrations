@@ -9,8 +9,8 @@ pipelines:
     - step:
         script:
           - wget https://sca-downloads.s3.amazonaws.com/cli/latest/ScaResolver-musl64.tar.gz
-          - tar -xzvf ScaResolver-linux64.tar.gz
-          - rm -rf ScaResolver-linux64.tar.gz
+          - tar -xzvf ScaResolver-musl64.tar.gz
+          - rm -rf ScaResolver-musl64.tar.gz
           - >-
             /app/bin/cx
             scan create
