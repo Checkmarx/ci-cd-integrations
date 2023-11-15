@@ -62,7 +62,7 @@ mr-checkmarx-scan:
     - >-
       if [ -n "$scanId" ]; then
         echo "Creating MR decoration for scan ID:" $scanId
-        ./cx utils pr gitlab --gitlab-project-id $CI_PROJECT_ID --mr-iid $CI_MERGE_REQUEST_IID --namespace $CI_PROJECT_NAMESPACE --repo-name $CI_PROJECT_NAME --scan-id $scanId --token ${GL_TOKEN}
+        /app/bin/cx utils pr gitlab --gitlab-project-id $CI_PROJECT_ID --mr-iid $CI_MERGE_REQUEST_IID --namespace $CI_PROJECT_NAMESPACE --repo-name $CI_PROJECT_NAME --scan-id $scanId --token ${GL_TOKEN}
       else
         echo "MR decoration not created."
       fi
