@@ -17,6 +17,7 @@ variables:
     CX_ADDITIONAL_PARAMS: ""
     CX_FILE_FILTERS: ""
     CHECKMARX_DOCKER_IMAGE: "ast-cli"
+    SECURITY_DASHBOARD_ON_MR: "true"
 
 checkmarx-scan:
   stage: test
@@ -66,3 +67,53 @@ mr-checkmarx-scan:
       else
         echo "MR decoration not created."
       fi
+      
+mr-checkmarx-scan-security-dashboard:
+  stage: .post
+  needs: ["mr-checkmarx-scan"]
+  rules:
+    - if: '$SECURITY_DASHBOARD_ON_MR == "true" && $CI_PIPELINE_SOURCE == "merge_request_event"'
+  image:   
+    name: checkmarx/${CHECKMARX_DOCKER_IMAGE}
+    entrypoint: ['']
+  script:
+    - eval "args=(${CX_ADDITIONAL_PARAMS})"
+    - >-
+      /app/bin/cx
+      scan create
+      --project-name ${CX_PROJECT_NAME}
+      --file-source '.'
+      --scan-info-format 'json'
+      --branch ${CX_BRANCH_NAME}
+      --agent 'Gitlab'
+      --report-format gl-sast
+      --file-filter "${CX_FILE_FILTERS}"
+      "${args[@]}"
+  artifacts:
+    reports:
+      sast: cx_result.gl-sast-report.json
+
+checkmarx-scan-security-dashboard:
+  stage: .post
+  needs: ["checkmarx-scan"]
+  rules:
+    - if: '$SECURITY_DASHBOARD_ON_MR == "true" && $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+  image:   
+    name: checkmarx/${CHECKMARX_DOCKER_IMAGE}
+    entrypoint: ['']
+  script:
+    - eval "args=(${CX_ADDITIONAL_PARAMS})"
+    - >-
+      /app/bin/cx
+      scan create
+      --project-name ${CX_PROJECT_NAME}
+      --file-source '.'
+      --scan-info-format 'json'
+      --branch ${CX_BRANCH_NAME}
+      --agent 'Gitlab'
+      --report-format gl-sast
+      --file-filter "${CX_FILE_FILTERS}"
+      "${args[@]}"
+  artifacts:
+    reports:
+      sast: cx_result.gl-sast-report.json
