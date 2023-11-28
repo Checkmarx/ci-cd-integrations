@@ -25,7 +25,7 @@ checkmarx-scan:
     name: checkmarx/${CHECKMARX_DOCKER_IMAGE}
     entrypoint: ['']
   rules:
-    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+    - if: '$SECURITY_DASHBOARD_ON_MR != "true" && $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
   script:
     - eval "args=(${CX_ADDITIONAL_PARAMS})"
     - >-
@@ -42,7 +42,7 @@ checkmarx-scan:
 mr-checkmarx-scan:
   stage: test
   rules:
-    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$SECURITY_DASHBOARD_ON_MR != "true" && $CI_PIPELINE_SOURCE == "merge_request_event"'
   image:
     name: checkmarx/${CHECKMARX_DOCKER_IMAGE}
     entrypoint: ['']
@@ -56,21 +56,20 @@ mr-checkmarx-scan:
       --file-source '.'
       --scan-info-format 'json'
       --branch ${CX_BRANCH_NAME}
-      --agent 'Gitlab' 
+      --agent 'Gitlab'
       --file-filter "${CX_FILE_FILTERS}"
       "${args[@]}" | tee -i $output_file
     - scanId=(`grep -E '"(ID)":"((\\"|[^"])*)"' $output_file | cut -d',' -f1 | cut -d':' -f2 | tr -d '"'`)
     - >-
       if [ -n "$scanId" ]; then
         echo "Creating MR decoration for scan ID:" $scanId
-        /app/bin/cx utils pr gitlab --gitlab-project-id $CI_PROJECT_ID --mr-iid $CI_MERGE_REQUEST_IID --namespace $CI_PROJECT_NAMESPACE --repo-name $CI_PROJECT_NAME --scan-id $scanId --token $GITLAB_TOKEN
+        /app/bin/cx utils pr gitlab --gitlab-project-id $CI_PROJECT_ID --mr-iid $CI_MERGE_REQUEST_IID --namespace $CI_PROJECT_NAMESPACE --repo-name $CI_PROJECT_NAME --scan-id $scanId --token $GITLAB_TOKEN 
       else
         echo "MR decoration not created."
       fi
-      
+
 mr-checkmarx-scan-security-dashboard:
-  stage: .post
-  needs: ["mr-checkmarx-scan"]
+  stage: test
   rules:
     - if: '$SECURITY_DASHBOARD_ON_MR == "true" && $CI_PIPELINE_SOURCE == "merge_request_event"'
   image:   
@@ -94,8 +93,7 @@ mr-checkmarx-scan-security-dashboard:
       sast: cx_result.gl-sast-report.json
 
 checkmarx-scan-security-dashboard:
-  stage: .post
-  needs: ["checkmarx-scan"]
+  stage: test
   rules:
     - if: '$SECURITY_DASHBOARD_ON_MR == "true" && $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
   image:   
