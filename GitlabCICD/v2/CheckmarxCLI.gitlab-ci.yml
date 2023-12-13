@@ -78,6 +78,7 @@ mr-checkmarx-scan-security-dashboard:
     entrypoint: ['']
   script:
     - eval "args=(${CX_ADDITIONAL_PARAMS})"
+    - output_file=./output.log
     - >-
       /app/bin/cx
       scan create
@@ -88,7 +89,15 @@ mr-checkmarx-scan-security-dashboard:
       --agent 'Gitlab'
       --report-format gl-sast
       --file-filter "${CX_FILE_FILTERS}"
-      "${args[@]}"
+      "${args[@]}" | tee -i $output_file
+    - scanId=(`grep -E '"(ID)":"((\\"|[^"])*)"' $output_file | cut -d',' -f1 | cut -d':' -f2 | tr -d '"'`)
+    - >-
+      if [ -n "$scanId" ]; then
+        echo "Creating MR decoration for scan ID:" $scanId
+        /app/bin/cx utils pr gitlab --gitlab-project-id $CI_PROJECT_ID --mr-iid $CI_MERGE_REQUEST_IID --namespace $CI_PROJECT_NAMESPACE --repo-name $CI_PROJECT_NAME --scan-id $scanId --token $GITLAB_TOKEN 
+      else
+        echo "MR decoration not created."
+      fi
   artifacts:
     reports:
       sast: cx_result.gl-sast-report.json
