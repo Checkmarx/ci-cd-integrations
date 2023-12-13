@@ -17,7 +17,8 @@ variables:
     CX_ADDITIONAL_PARAMS: ""
     CX_FILE_FILTERS: ""
     CHECKMARX_DOCKER_IMAGE: "ast-cli"
-    SECURITY_DASHBOARD_ON_MR: "true"
+    SECURITY_DASHBOARD: "false"
+    SECURITY_DASHBOARD_ON_MR: "false"
 
 checkmarx-scan:
   stage: test
@@ -25,7 +26,7 @@ checkmarx-scan:
     name: checkmarx/${CHECKMARX_DOCKER_IMAGE}
     entrypoint: ['']
   rules:
-    - if: '$SECURITY_DASHBOARD_ON_MR != "true" && $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+    - if: '$SECURITY_DASHBOARD != "true" && $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
   script:
     - eval "args=(${CX_ADDITIONAL_PARAMS})"
     - >-
@@ -95,7 +96,7 @@ mr-checkmarx-scan-security-dashboard:
 checkmarx-scan-security-dashboard:
   stage: test
   rules:
-    - if: '$SECURITY_DASHBOARD_ON_MR == "true" && $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+    - if: '$SECURITY_DASHBOARD == "true" && $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
   image:   
     name: checkmarx/${CHECKMARX_DOCKER_IMAGE}
     entrypoint: ['']
