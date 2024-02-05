@@ -26,4 +26,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           args: >
-            -Dsonar.externalIssuesReportPaths=cx_result_sonar.json
+            -Dsonar.externalIssuesReportPaths=./cx_result_sonar.json
