@@ -87,7 +87,7 @@ mr-checkmarx-scan-security-dashboard:
       --scan-info-format 'json'
       --branch ${CX_BRANCH_NAME}
       --agent 'Gitlab'
-      --report-format gl-sast
+      --report-format gl-sast,gl-sca
       --file-filter "${CX_FILE_FILTERS}"
       "${args[@]}" | tee -i $output_file
     - scanId=(`grep -E '"(ID)":"((\\"|[^"])*)"' $output_file | cut -d',' -f1 | cut -d':' -f2 | tr -d '"'`)
@@ -101,6 +101,7 @@ mr-checkmarx-scan-security-dashboard:
   artifacts:
     reports:
       sast: cx_result.gl-sast-report.json
+      dependency_scanning: cx_result.gl-sca-report.json
 
 checkmarx-scan-security-dashboard:
   stage: test
@@ -119,9 +120,10 @@ checkmarx-scan-security-dashboard:
       --scan-info-format 'json'
       --branch ${CX_BRANCH_NAME}
       --agent 'Gitlab'
-      --report-format gl-sast
+      --report-format gl-sast,gl-sca
       --file-filter "${CX_FILE_FILTERS}"
       "${args[@]}"
   artifacts:
     reports:
       sast: cx_result.gl-sast-report.json
+      dependency_scanning: cx_result.gl-sca-report.json
