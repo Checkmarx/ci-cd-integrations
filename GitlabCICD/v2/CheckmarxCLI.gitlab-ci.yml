@@ -14,6 +14,7 @@ variables:
     CX_CLIENT_ID: ${CX_CLIENT_ID}
     CX_CLIENT_SECRET: ${CX_CLIENT_SECRET}
     GITLAB_TOKEN: ${GITLAB_TOKEN}
+    GITLAB_PATH: "" # Should be the number of the PATH that you want to concatenate with the repository name
     CX_ADDITIONAL_PARAMS: ""
     CX_FILE_FILTERS: ""
     CHECKMARX_DOCKER_IMAGE: "ast-cli"
@@ -29,10 +30,11 @@ checkmarx-scan:
     - if: '$SECURITY_DASHBOARD != "true" && $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
   script:
     - eval "args=(${CX_ADDITIONAL_PARAMS})"
+    - export GIT_GROUP=$(echo $CI_PROJECT_NAMESPACE | cut -d'/' -${GITLAB_PATH})
     - >-
       /app/bin/cx
       scan create
-      --project-name ${CX_PROJECT_NAME}
+      --project-name $GIT_GROUP-${CX_PROJECT_NAME}
       --file-source '.'
       --scan-info-format 'json'
       --branch ${CX_BRANCH_NAME}
@@ -50,10 +52,11 @@ mr-checkmarx-scan:
   script:
     - eval "args=(${CX_ADDITIONAL_PARAMS})"
     - output_file=./output.log
+    - export GIT_GROUP=$(echo $CI_PROJECT_NAMESPACE | cut -d'/' -${GITLAB_POSITION})
     - >-
       /app/bin/cx
       scan create
-      --project-name ${CX_PROJECT_NAME}
+      --project-name $GIT_GROUP-${CX_PROJECT_NAME}
       --file-source '.'
       --scan-info-format 'json'
       --branch ${CX_BRANCH_NAME}
@@ -79,10 +82,11 @@ mr-checkmarx-scan-security-dashboard:
   script:
     - eval "args=(${CX_ADDITIONAL_PARAMS})"
     - output_file=./output.log
+    - export GIT_GROUP=$(echo $CI_PROJECT_NAMESPACE | cut -d'/' -${GITLAB_POSITION})
     - >-
       /app/bin/cx
       scan create
-      --project-name ${CX_PROJECT_NAME}
+      --project-name $GIT_GROUP-${CX_PROJECT_NAME}
       --file-source '.'
       --scan-info-format 'json'
       --branch ${CX_BRANCH_NAME}
@@ -112,10 +116,11 @@ checkmarx-scan-security-dashboard:
     entrypoint: ['']
   script:
     - eval "args=(${CX_ADDITIONAL_PARAMS})"
+    - export GIT_GROUP=$(echo $CI_PROJECT_NAMESPACE | cut -d'/' -${GITLAB_POSITION})
     - >-
       /app/bin/cx
       scan create
-      --project-name ${CX_PROJECT_NAME}
+      --project-name $GIT_GROUP-${CX_PROJECT_NAME}
       --file-source '.'
       --scan-info-format 'json'
       --branch ${CX_BRANCH_NAME}
