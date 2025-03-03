@@ -1,0 +1,16 @@
+name: Issue automation
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  notify_jira:
+    name: Notify Jira
+    uses: Checkmarx/plugins-release-workflow/.github/workflows/jira_notify.yml@main
+    with:
+      title: ${{ github.event.issue.title }}
+      body: ${{ github.event.issue.body }}
+      html_url: ${{ github.event.issue.html_url }}
+      repo: ${{ github.event.repository.full_name }}
+    secrets: inherit
