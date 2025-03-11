@@ -52,10 +52,10 @@ mr-checkmarx-scan:
     - output_file=./output.log
     - >
       if [ "$CI_SERVER_HOST" != "gitlab.com" ]; then
-        echo "Running on GitLab.com (cloud mode)"
+        echo "Running on self-hosted GitLab instance"
         code_repo_url_param="--code-repository-url ${CI_SERVER_URL}"
       else
-        echo "Running on self-hosted GitLab instance"
+        echo "Running on GitLab.com (cloud mode)"
         code_repo_url_param=""
       fi
     - >-
@@ -87,12 +87,12 @@ mr-checkmarx-scan-security-dashboard:
   script:
     - eval "args=(${CX_ADDITIONAL_PARAMS})"
     - output_file=./output.log
-    - >
+     - >
       if [ "$CI_SERVER_HOST" != "gitlab.com" ]; then
-        echo "Running on GitLab.com (cloud mode)"
+        echo "Running on self-hosted GitLab instance"
         code_repo_url_param="--code-repository-url ${CI_SERVER_URL}"
       else
-        echo "Running on self-hosted GitLab instance"
+        echo "Running on GitLab.com (cloud mode)"
         code_repo_url_param=""
       fi
     - >-
