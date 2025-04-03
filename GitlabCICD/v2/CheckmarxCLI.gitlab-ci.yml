@@ -51,7 +51,10 @@ mr-checkmarx-scan:
     - eval "args=(${CX_ADDITIONAL_PARAMS})"
     - output_file=./output.log
     - >
-      if [ "$CI_SERVER_HOST" != "gitlab.com" ]; then
+      if [ -n "$CX_LINK_SERVER_HOST" ]; then
+        echo "Using CX_LINK_SERVER_HOST"
+        code_repo_url_param="--code-repository-url ${CX_LINK_SERVER_HOST}"
+      elif [ "$CI_SERVER_HOST" != "gitlab.com" ]; then
         echo "Running on self-hosted GitLab instance"
         code_repo_url_param="--code-repository-url ${CI_SERVER_URL}"
       else
@@ -88,7 +91,10 @@ mr-checkmarx-scan-security-dashboard:
     - eval "args=(${CX_ADDITIONAL_PARAMS})"
     - output_file=./output.log
     - >
-      if [ "$CI_SERVER_HOST" != "gitlab.com" ]; then
+      if [ -n "$CX_LINK_SERVER_HOST" ]; then
+        echo "Using CX_LINK_SERVER_HOST"
+        code_repo_url_param="--code-repository-url ${CX_LINK_SERVER_HOST}"
+      elif [ "$CI_SERVER_HOST" != "gitlab.com" ]; then
         echo "Running on self-hosted GitLab instance"
         code_repo_url_param="--code-repository-url ${CI_SERVER_URL}"
       else
