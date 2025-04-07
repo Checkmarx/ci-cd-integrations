@@ -14,6 +14,7 @@ variables:
     CX_CLIENT_ID: ${CX_CLIENT_ID}
     CX_CLIENT_SECRET: ${CX_CLIENT_SECRET}
     GITLAB_TOKEN: ${GITLAB_TOKEN}
+    CX_LINK_SERVER_HOST: ${CX_LINK_SERVER_HOST}
     CX_ADDITIONAL_PARAMS: ""
     CX_FILE_FILTERS: ""
     CHECKMARX_DOCKER_IMAGE: "ast-cli"
@@ -51,7 +52,10 @@ mr-checkmarx-scan:
     - eval "args=(${CX_ADDITIONAL_PARAMS})"
     - output_file=./output.log
     - >
-      if [ "$CI_SERVER_HOST" != "gitlab.com" ]; then
+      if [ -n "$CX_LINK_SERVER_HOST" ]; then
+        echo "Using CX_LINK_SERVER_HOST"
+        code_repo_url_param="--code-repository-url ${CX_LINK_SERVER_HOST}"
+      elif [ "$CI_SERVER_HOST" != "gitlab.com" ]; then
         echo "Running on self-hosted GitLab instance"
         code_repo_url_param="--code-repository-url ${CI_SERVER_URL}"
       else
@@ -88,7 +92,10 @@ mr-checkmarx-scan-security-dashboard:
     - eval "args=(${CX_ADDITIONAL_PARAMS})"
     - output_file=./output.log
     - >
-      if [ "$CI_SERVER_HOST" != "gitlab.com" ]; then
+      if [ -n "$CX_LINK_SERVER_HOST" ]; then
+        echo "Using CX_LINK_SERVER_HOST"
+        code_repo_url_param="--code-repository-url ${CX_LINK_SERVER_HOST}"
+      elif [ "$CI_SERVER_HOST" != "gitlab.com" ]; then
         echo "Running on self-hosted GitLab instance"
         code_repo_url_param="--code-repository-url ${CI_SERVER_URL}"
       else
