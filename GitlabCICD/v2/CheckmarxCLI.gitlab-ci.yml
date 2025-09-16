@@ -15,7 +15,7 @@ variables:
     CX_CLIENT_SECRET: ${CX_CLIENT_SECRET}
     GITLAB_TOKEN: ${GITLAB_TOKEN}
     CX_LINK_SERVER_HOST: ${CX_LINK_SERVER_HOST}
-    CX_ADDITIONAL_PARAMS: ""
+    CX_ADDITIONAL_PARAMS: "--debug --threshold 'sast-high=10; sast-medium=20; sca-high=10; containers-high=5' --scan-types SAST"
     CX_FILE_FILTERS: ""
     CHECKMARX_DOCKER_IMAGE: "ast-cli"
     SECURITY_DASHBOARD: "false"
@@ -29,7 +29,8 @@ checkmarx-scan:
   rules:
     - if: '$SECURITY_DASHBOARD != "true" && $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
   script:
-    - eval "args=(${CX_ADDITIONAL_PARAMS})"
+    - set -- $CX_ADDITIONAL_PARAMS
+    - args=("$@")
     - >-
       /app/bin/cx
       scan create
@@ -49,7 +50,8 @@ mr-checkmarx-scan:
     name: checkmarx/${CHECKMARX_DOCKER_IMAGE}
     entrypoint: ['']
   script:
-    - eval "args=(${CX_ADDITIONAL_PARAMS})"
+    - set -- $CX_ADDITIONAL_PARAMS
+    - args=("$@")
     - output_file=./output.log
     - >
       if [ -n "$CX_LINK_SERVER_HOST" ]; then
@@ -89,7 +91,8 @@ mr-checkmarx-scan-security-dashboard:
     name: checkmarx/${CHECKMARX_DOCKER_IMAGE}
     entrypoint: ['']
   script:
-    - eval "args=(${CX_ADDITIONAL_PARAMS})"
+    - set -- $CX_ADDITIONAL_PARAMS
+    - args=("$@")
     - output_file=./output.log
     - >
       if [ -n "$CX_LINK_SERVER_HOST" ]; then
@@ -134,7 +137,8 @@ checkmarx-scan-security-dashboard:
     name: checkmarx/${CHECKMARX_DOCKER_IMAGE}
     entrypoint: ['']
   script:
-    - eval "args=(${CX_ADDITIONAL_PARAMS})"
+    - set -- $CX_ADDITIONAL_PARAMS
+    - args=("$@")"
     - >-
       /app/bin/cx
       scan create
