@@ -15,7 +15,7 @@ variables:
     CX_CLIENT_SECRET: ${CX_CLIENT_SECRET}
     GITLAB_TOKEN: ${GITLAB_TOKEN}
     CX_LINK_SERVER_HOST: ${CX_LINK_SERVER_HOST}
-    CX_ADDITIONAL_PARAMS: "--debug --threshold 'sast-high=10; sast-medium=20; sca-high=10; containers-high=5' --scan-types SAST"
+    CX_ADDITIONAL_PARAMS: ""
     CX_FILE_FILTERS: ""
     CHECKMARX_DOCKER_IMAGE: "ast-cli"
     SECURITY_DASHBOARD: "false"
