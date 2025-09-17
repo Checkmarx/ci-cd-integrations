@@ -23,7 +23,7 @@ checkmarx-scan:
     name: checkmarx/${CHECKMARX_DOCKER_IMAGE}
     entrypoint: ['']
   script:
-    - eval "args=(${CX_ADDITIONAL_PARAMS})"
+    - read -r -a args <<< "$CX_ADDITIONAL_PARAMS"
     - >-
       /app/bin/cx
       scan create

@@ -29,7 +29,7 @@ checkmarx-scan:
   rules:
     - if: '$SECURITY_DASHBOARD != "true" && $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
   script:
-    - eval "args=(${CX_ADDITIONAL_PARAMS})"
+    - read -r -a args <<< "$CX_ADDITIONAL_PARAMS"
     - >-
       /app/bin/cx
       scan create
@@ -49,7 +49,7 @@ mr-checkmarx-scan:
     name: checkmarx/${CHECKMARX_DOCKER_IMAGE}
     entrypoint: ['']
   script:
-    - eval "args=(${CX_ADDITIONAL_PARAMS})"
+    - read -r -a args <<< "$CX_ADDITIONAL_PARAMS"
     - output_file=./output.log
     - >
       if [ -n "$CX_LINK_SERVER_HOST" ]; then
@@ -89,7 +89,7 @@ mr-checkmarx-scan-security-dashboard:
     name: checkmarx/${CHECKMARX_DOCKER_IMAGE}
     entrypoint: ['']
   script:
-    - eval "args=(${CX_ADDITIONAL_PARAMS})"
+    - read -r -a args <<< "$CX_ADDITIONAL_PARAMS"
     - output_file=./output.log
     - >
       if [ -n "$CX_LINK_SERVER_HOST" ]; then
@@ -134,7 +134,7 @@ checkmarx-scan-security-dashboard:
     name: checkmarx/${CHECKMARX_DOCKER_IMAGE}
     entrypoint: ['']
   script:
-    - eval "args=(${CX_ADDITIONAL_PARAMS})"
+    - read -r -a args <<< "$CX_ADDITIONAL_PARAMS"
     - >-
       /app/bin/cx
       scan create
