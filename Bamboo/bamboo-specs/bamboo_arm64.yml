@@ -12,7 +12,7 @@ stages:
 
 Job cli:
   docker:
-    image: homebrew/ubuntu18.04
+    image: homebrew/ubuntu18.04:4.4.32@sha256:d67b0e7617b68fa2b1070e2f3abf31eb1df7410022386396770b217f5c8d63c6
   tasks:
     - script:
         - brew install checkmarx/ast-cli/ast-cli

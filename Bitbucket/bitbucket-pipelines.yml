@@ -2,7 +2,7 @@
 # https://checkmarx.com/resource/documents/en/34965-68720-checkmarx-one-bitbucket-pipelines-integration.html
 #
 
-image: checkmarx/ast-cli
+image: checkmarx/ast-cli:2.3.53@sha256:5c05cf0a9ef9c74620978d3022c8ffbeb9e5c4860a71b727369d9fe9eecc0134
  
 pipelines:
   default:
