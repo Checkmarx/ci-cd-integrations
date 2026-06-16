@@ -17,7 +17,7 @@ Scan:
       plugin-key: com.atlassian.bamboo.plugins.bamboo-docker-plugin:task.docker.cli
       configuration:
         commandOption: run
-        image: checkmarx/ast-cli
+        image: checkmarx/ast-cli:2.3.53@sha256:5c05cf0a9ef9c74620978d3022c8ffbeb9e5c4860a71b727369d9fe9eecc0134
         detach: 'false'
         serviceWait: 'false'
         command: /app/bin/cx scan create -s .  --project-name mybamboo --base-uri ${bamboo.CX_BASE_URI} --tenant ${bamboo.CX_TENANT} --client-id ${bamboo.CX_CLIENT_ID} --client-secret ${bamboo.CX_CLIENT_ID_SECRET} --branch ${bamboo.planRepository.1.branchName} --report-format summaryHTML --output-path ./cx_results/ --output-name cx_results

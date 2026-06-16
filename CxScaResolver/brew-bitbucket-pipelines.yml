@@ -2,7 +2,7 @@
 # https://checkmarx.com/resource/documents/en/34965-68720-checkmarx-one-bitbucket-pipelines-integration.html
 #
 
-image: atlassian/default-image:2
+image: atlassian/default-image:2@sha256:d4b1cc074a5ac1ee5d9702a536b8a8456554732df70f4b55fd85515e4b106f8d
 
 pipelines:
   default:

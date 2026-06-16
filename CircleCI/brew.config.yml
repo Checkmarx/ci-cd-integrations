@@ -13,7 +13,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: cimg/base:2021.04
+      - image: cimg/base:2021.04@sha256:28cd3680dd07a8c889b836b8b8ef56f48dd1a0a349881aede5b2b50c20f50398
     steps:
       - run:
           name: "Run Scan"
