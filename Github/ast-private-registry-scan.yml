@@ -16,7 +16,7 @@ name: Checkmarx Scan
 # Controls when the workflow will run
 on:
   push:
-    branches: [ "master" ]
+    branches: ["master"]
   workflow_dispatch:
 
 permissions:
@@ -37,7 +37,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
 
     steps:
-      - name :  Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Checkmarx One scan
@@ -51,13 +51,13 @@ jobs:
           USERNAME_MYCOMPANY_JFROG_IO: ${{ secrets.JFROG_USERNAME }}
           PASSWORD_MYCOMPANY_JFROG_IO: ${{ secrets.JFROG_ACCESS_TOKEN }}
         with:
-          base_uri: https://eu.ast.checkmarx.net  # This should be replaced by your base uri for Checkmarx One
+          base_uri: https://eu.ast.checkmarx.net # This should be replaced by your base uri for Checkmarx One
           cx_client_id: ${{ secrets.CX_CLIENT_ID }} # This should be created within your Checkmarx One account : https://checkmarx.com/resource/documents/en/34965-118315-authentication-for-checkmarx-one-cli.html#UUID-a4e31a96-1f36-6293-e95a-97b4b9189060_UUID-4123a2ff-32d0-2287-8dd2-3c36947f675e
           cx_client_secret: ${{ secrets.CX_CLIENT_SECRET }} # This should be created within your Checkmarx One account : https://checkmarx.com/resource/documents/en/34965-118315-authentication-for-checkmarx-one-cli.html#UUID-a4e31a96-1f36-6293-e95a-97b4b9189060_UUID-4123a2ff-32d0-2287-8dd2-3c36947f675e
           cx_tenant: ${{ secrets.CX_TENANT }} # This should be replaced by your tenant for Checkmarx One
-          additional_params: --scan-types container-security --containers-local-resolution
+          scan_params: --scan-types container-security --containers-local-resolution
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v3
         with:
-           # Path to SARIF file relative to the root of the repository
+          # Path to SARIF file relative to the root of the repository
           sarif_file: cx_result.sarif
