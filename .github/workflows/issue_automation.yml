@@ -4,13 +4,22 @@ on:
   issues:
     types: [opened]
 
+permissions: {}
+
 jobs:
   notify_jira:
     name: Notify Jira
-    uses: Checkmarx/plugins-release-workflow/.github/workflows/jira_notify.yml@main
+    uses: Checkmarx/plugins-release-workflow/.github/workflows/jira_notify.yml@a24b18e9c82ae9da9aa1f59fa32a007945f77c26 # main
+    permissions:
+      contents: read  # for issue details
+      issues: read    # for issue access
     with:
       title: ${{ github.event.issue.title }}
       body: ${{ github.event.issue.body }}
       html_url: ${{ github.event.issue.html_url }}
       repo: ${{ github.event.repository.full_name }}
-    secrets: inherit
+    secrets:
+      AST_JIRA_API_TOKEN: ${{ secrets.AST_JIRA_API_TOKEN }}
+      AST_JIRA_USER_EMAIL: ${{ secrets.AST_JIRA_USER_EMAIL }}
+      JIRA_FIELDS_BUG: ${{ secrets.JIRA_FIELDS_BUG }}
+      JIRA_FIELDS_OTHER: ${{ secrets.JIRA_FIELDS_OTHER }}
