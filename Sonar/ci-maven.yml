@@ -6,7 +6,6 @@ on:
 
 jobs:
   scan:
-
     runs-on: ubuntu-latest
     if: ${{ true }}
 
@@ -38,15 +37,15 @@ jobs:
       - name: Checkmarx AST CLI Action
         uses: checkmarx/ast-github-action@main
         with:
-            project_name: <your_project_name>
-            base_uri: <AST Base URI>
-            cx_tenant: ${{ secrets.CX_TENANT }}
-            cx_client_id: ${{ secrets.CX_CLIENT_ID }}
-            cx_client_secret: ${{ secrets.CX_CLIENT_SECRET }}
-            additional_params: --report-format sonar
+          project_name: <your_project_name>
+          base_uri: <AST Base URI>
+          cx_tenant: ${{ secrets.CX_TENANT }}
+          cx_client_id: ${{ secrets.CX_CLIENT_ID }}
+          cx_client_secret: ${{ secrets.CX_CLIENT_SECRET }}
+          scan_params: --report-format sonar
 
       - name: Sonar analyze
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=<sonar_project_key> -Dsonar.organization=<sonar_organization> -Dsonar.externalIssuesReportPaths=./cx_result_sonar.json 
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=<sonar_project_key> -Dsonar.organization=<sonar_organization> -Dsonar.externalIssuesReportPaths=./cx_result_sonar.json
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ github.token }}
